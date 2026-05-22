@@ -246,6 +246,64 @@
 
     }
 
+    /* TYPING EFFECT */
+
+    .typing-text{
+
+      overflow:hidden;
+
+      white-space:nowrap;
+
+      border-right:3px solid #22b8ff;
+
+      width:0;
+
+      animation:
+      typing 2s steps(30,end) forwards,
+      blink 0.7s infinite;
+
+    }
+
+    @keyframes typing{
+
+      from{
+        width:0;
+      }
+
+      to{
+        width:100%;
+      }
+
+    }
+
+    @keyframes blink{
+
+      50%{
+        border-color:transparent;
+      }
+
+    }
+
+    /* SCROLL REVEAL */
+
+    .reveal{
+
+      opacity:0;
+
+      transform:translateY(60px);
+
+      transition:all 1s ease;
+
+    }
+
+    .reveal.active{
+
+      opacity:1;
+
+      transform:translateY(0);
+
+    }
+
     /* ABOUT */
 
     .about-grid{
@@ -661,7 +719,7 @@
 
       .hero-text h1{
 
-        font-size:46px;
+        font-size:42px;
 
       }
 
@@ -690,21 +748,11 @@
 
       }
 
-      .skill-card{
+      .typing-text{
 
-        padding:30px;
-
-      }
-
-      .skill-card h3{
-
-        font-size:24px;
-
-      }
-
-      .skill-card ul li{
-
-        font-size:16px;
+        white-space:normal;
+        border-right:none;
+        width:100%;
 
       }
 
@@ -748,7 +796,9 @@
 
     <div class="hero-text">
 
-      <h1>Hello, I'm <span>Vildah Apondi</span></h1>
+      <h1 class="typing-text">
+        Hello, I'm <span>Vildah Apondi</span>
+      </h1>
 
       <h2>Professional Virtual Assistant</h2>
 
@@ -787,7 +837,7 @@
 
     </div>
 
-    <div class="hero-img">
+    <div class="hero-img reveal">
 
       <img src="https://www.image2url.com/r2/default/images/1779443453212-284d03df-e480-465d-84a6-a92a23907160.png">
 
@@ -799,11 +849,11 @@
 
   <section id="about">
 
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title reveal">About Me</h2>
 
     <div class="about-grid">
 
-      <div class="about-card">
+      <div class="about-card reveal">
 
         <h3>Professional Background</h3>
 
@@ -817,7 +867,7 @@
 
       </div>
 
-      <div class="about-card">
+      <div class="about-card reveal">
 
         <h3>Core Expertise</h3>
 
@@ -839,11 +889,11 @@
 
   <section id="skills">
 
-    <h2 class="section-title">Professional Skills</h2>
+    <h2 class="section-title reveal">Professional Skills</h2>
 
     <div class="professional-grid">
 
-      <div class="skill-card">
+      <div class="skill-card reveal">
 
         <h3>Administrative & Executive Support</h3>
 
@@ -867,7 +917,7 @@
 
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card reveal">
 
         <h3>Communication & Correspondence</h3>
 
@@ -887,7 +937,7 @@
 
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card reveal">
 
         <h3>Project & Task Coordination</h3>
 
@@ -907,7 +957,7 @@
 
       </div>
 
-      <div class="skill-card">
+      <div class="skill-card reveal">
 
         <h3>Tech & Tools Proficiency</h3>
 
@@ -929,7 +979,7 @@
 
       </div>
 
-      <div class="skill-card soft-skills">
+      <div class="skill-card soft-skills reveal">
 
         <h3>Soft Skills</h3>
 
@@ -959,11 +1009,11 @@
 
   <section id="certificates">
 
-    <h2 class="section-title">Certificates</h2>
+    <h2 class="section-title reveal">Certificates</h2>
 
     <div class="certificate-container">
 
-      <div class="certificate-card">
+      <div class="certificate-card reveal">
 
         <a href="https://i.imgur.com/vw7ZGh0.jpeg" target="_blank">
 
@@ -993,11 +1043,11 @@
 
   <section id="services">
 
-    <h2 class="section-title">My Services</h2>
+    <h2 class="section-title reveal">My Services</h2>
 
     <div class="services-grid">
 
-      <div class="service-box">
+      <div class="service-box reveal">
 
         <h3>Administrative Support</h3>
 
@@ -1010,7 +1060,7 @@
 
       </div>
 
-      <div class="service-box">
+      <div class="service-box reveal">
 
         <h3>Content & Marketing Support</h3>
 
@@ -1023,7 +1073,7 @@
 
       </div>
 
-      <div class="service-box">
+      <div class="service-box reveal">
 
         <h3>Customer Support</h3>
 
@@ -1045,11 +1095,11 @@
 
   <section id="projects">
 
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title reveal">Projects</h2>
 
     <div class="projects-grid">
 
-      <div class="project-card">
+      <div class="project-card reveal">
 
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop">
 
@@ -1068,7 +1118,7 @@
 
       </div>
 
-      <div class="project-card">
+      <div class="project-card reveal">
 
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop">
 
@@ -1087,7 +1137,7 @@
 
       </div>
 
-      <div class="project-card">
+      <div class="project-card reveal">
 
         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop">
 
@@ -1114,9 +1164,9 @@
 
   <section id="contact">
 
-    <h2 class="section-title">Let's Work Together</h2>
+    <h2 class="section-title reveal">Let's Work Together</h2>
 
-    <div class="contact-box">
+    <div class="contact-box reveal">
 
       <p>Email: tylerknine@gmail.com</p>
 
@@ -1141,6 +1191,38 @@
     <p>© 2026 My Portfolio | Designed by Vildah</p>
 
   </footer>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+
+  <script>
+
+    function revealElements(){
+
+      let reveals=document.querySelectorAll(".reveal");
+
+      for(let i=0;i<reveals.length;i++){
+
+        let windowHeight=window.innerHeight;
+
+        let revealTop=reveals[i].getBoundingClientRect().top;
+
+        let revealPoint=100;
+
+        if(revealTop < windowHeight - revealPoint){
+
+          reveals[i].classList.add("active");
+
+        }
+
+      }
+
+    }
+
+    window.addEventListener("scroll",revealElements);
+
+    revealElements();
+
+  </script>
 
 </body>
 
