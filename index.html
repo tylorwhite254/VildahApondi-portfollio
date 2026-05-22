@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Vildah Apondi | Virtual Assistant</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,175 +34,124 @@
     /* HEADER */
 
     header{
-
       position:fixed;
+      width:100%;
       top:0;
       left:0;
-
-      width:100%;
-
-      padding:18px 8%;
-
-      background:rgba(7,18,47,0.95);
-
-      backdrop-filter:blur(12px);
-
       z-index:1000;
+      background:rgba(7,18,47,0.95);
+      backdrop-filter:blur(12px);
+      padding:18px 8%;
 
       display:flex;
       align-items:center;
       justify-content:space-between;
-
     }
 
     .logo{
-
       font-size:28px;
       font-weight:800;
       color:#22b8ff;
-
     }
 
     nav{
-
       display:flex;
       gap:25px;
-
     }
 
     nav a{
-
       color:white;
       text-decoration:none;
       font-weight:500;
       transition:0.3s;
-
     }
 
     nav a:hover{
-
       color:#22b8ff;
-
     }
 
     /* HERO */
 
     .hero{
-
       min-height:100vh;
 
       display:flex;
       align-items:center;
       justify-content:space-between;
-
       gap:50px;
       flex-wrap:wrap;
-
     }
 
     .hero-text{
-
       flex:1;
       min-width:300px;
-
     }
 
     .hero-text h1{
-
       font-size:62px;
       line-height:1.1;
       margin-bottom:15px;
-
     }
 
     .hero-text h1 span{
-
       color:#22b8ff;
-
     }
 
     .hero-text h2{
-
       font-size:30px;
       color:#d6d6d6;
       margin-bottom:20px;
-
     }
 
     .hero-text p{
-
       color:#d7d7d7;
       max-width:650px;
       line-height:1.8;
       margin-bottom:30px;
-
     }
 
     .btn{
-
       display:inline-block;
-
       padding:14px 32px;
-
       background:#22b8ff;
       color:#07122f;
-
       text-decoration:none;
       font-weight:700;
-
       border-radius:50px;
-
       transition:0.3s;
-
     }
 
     .btn:hover{
-
       transform:translateY(-5px);
-
       box-shadow:0 10px 30px rgba(34,184,255,0.4);
-
     }
 
     .hero-img{
-
       flex:1;
       text-align:center;
-
     }
 
     .hero-img img{
-
       width:350px;
       height:350px;
-
       object-fit:cover;
-
       border-radius:50%;
-
       border:5px solid #22b8ff;
-
       box-shadow:0 0 40px rgba(34,184,255,0.4);
-
     }
 
     /* SOCIAL */
 
     .social-icons{
-
       display:flex;
       gap:18px;
       margin-top:30px;
-
     }
 
     .social-icons a{
-
       width:55px;
       height:55px;
-
       border-radius:50%;
-
       background:#10214d;
 
       display:flex;
@@ -214,154 +159,63 @@
       justify-content:center;
 
       transition:0.3s;
-
     }
 
     .social-icons a:hover{
-
       background:#22b8ff;
-
       transform:translateY(-5px);
-
     }
 
     .social-icons img{
-
       width:28px;
-
     }
 
     /* TITLES */
 
     .section-title{
-
       text-align:center;
-
       font-size:56px;
       font-weight:800;
-
       color:#22b8ff;
-
       margin-bottom:70px;
-
-    }
-
-    /* TYPING EFFECT */
-
-    .typing-text{
-
-      overflow:hidden;
-
-      white-space:nowrap;
-
-      border-right:3px solid #22b8ff;
-
-      width:0;
-
-      animation:
-      typing 2s steps(30,end) forwards,
-      blink 0.7s infinite;
-
-    }
-
-    @keyframes typing{
-
-      from{
-        width:0;
-      }
-
-      to{
-        width:100%;
-      }
-
-    }
-
-    @keyframes blink{
-
-      50%{
-        border-color:transparent;
-      }
-
-    }
-
-    /* SCROLL REVEAL */
-
-    .reveal{
-
-      opacity:0;
-
-      transform:translateY(60px);
-
-      transition:all 1s ease;
-
-    }
-
-    .reveal.active{
-
-      opacity:1;
-
-      transform:translateY(0);
-
     }
 
     /* ABOUT */
 
     .about-grid{
-
       display:grid;
-
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
       gap:30px;
-
     }
 
     .about-card{
-
       background:#10214d;
-
       padding:35px;
-
       border-radius:30px;
-
       transition:0.3s;
-
     }
 
     .about-card:hover{
-
       transform:translateY(-6px);
-
     }
 
     .about-card h3{
-
       color:#22b8ff;
-
       margin-bottom:15px;
-
       font-size:28px;
-
     }
 
     .about-card p{
-
       color:#e1e1e1;
-
       line-height:1.8;
-
     }
 
     /* PROFESSIONAL SKILLS */
 
     .professional-grid{
-
       display:grid;
-
       grid-template-columns:repeat(2,1fr);
-
       gap:28px;
-
     }
 
     .skill-card{
@@ -375,10 +229,6 @@
       #c6921d
       );
 
-      background-size:200% 200%;
-
-      animation:goldFlow 8s ease infinite;
-
       color:#111827;
 
       padding:40px;
@@ -391,6 +241,9 @@
 
       transition:0.3s;
 
+      background-size:200% 200%;
+
+      animation:goldFlow 8s ease infinite;
     }
 
     @keyframes goldFlow{
@@ -410,277 +263,131 @@
     }
 
     .skill-card:hover{
-
       transform:translateY(-8px);
-
     }
 
     .skill-card h3{
-
       color:#22b8ff;
-
       font-size:30px;
-
       font-weight:800;
-
       margin-bottom:25px;
-
       line-height:1.3;
-
     }
 
     .skill-card ul{
-
       padding-left:25px;
-
     }
 
     .skill-card ul li{
-
       margin-bottom:16px;
-
       line-height:1.7;
-
       font-size:18px;
-
       font-weight:500;
-
     }
 
     .soft-skills{
-
       grid-column:1/-1;
-
     }
 
     .soft-skills ul{
-
       columns:2;
-
-    }
-
-    /* CERTIFICATES */
-
-    .certificate-container{
-
-      display:flex;
-      justify-content:center;
-      align-items:center;
-
-    }
-
-    .certificate-card{
-
-      width:100%;
-      max-width:1000px;
-
-      background:#10214d;
-
-      border-radius:30px;
-
-      overflow:hidden;
-
-      box-shadow:0 10px 30px rgba(0,0,0,0.35);
-
-      transition:0.3s;
-
-    }
-
-    .certificate-card:hover{
-
-      transform:translateY(-6px);
-
-    }
-
-    .certificate-image{
-
-      width:100%;
-
-      height:auto;
-
-      display:block;
-
-      object-fit:contain;
-
-      background:white;
-
-    }
-
-    .certificate-content{
-
-      padding:30px;
-
-      text-align:center;
-
-    }
-
-    .certificate-content h3{
-
-      color:#22b8ff;
-
-      font-size:30px;
-
-      margin-bottom:10px;
-
-    }
-
-    .certificate-content p{
-
-      color:#d8d8d8;
-
-      font-size:18px;
-
     }
 
     /* SERVICES */
 
     .services-grid{
-
       display:grid;
-
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
       gap:30px;
-
     }
 
     .service-box{
-
       background:#10214d;
-
       padding:35px;
-
       border-radius:30px;
-
       transition:0.3s;
-
     }
 
     .service-box:hover{
-
       transform:translateY(-6px);
-
     }
 
     .service-box h3{
-
       color:#22b8ff;
-
       font-size:28px;
-
       margin-bottom:15px;
-
     }
 
     .service-box p{
-
       line-height:1.8;
-
       color:#d7d7d7;
-
     }
 
     /* PROJECTS */
 
     .projects-grid{
-
       display:grid;
-
       grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
       gap:30px;
-
     }
 
     .project-card{
-
       background:#10214d;
-
       border-radius:28px;
-
       overflow:hidden;
-
       transition:0.3s;
-
     }
 
     .project-card:hover{
-
       transform:translateY(-6px);
-
     }
 
     .project-card img{
-
       width:100%;
       height:240px;
-
       object-fit:cover;
-
     }
 
     .project-content{
-
       padding:30px;
-
     }
 
     .project-content h3{
-
       color:#22b8ff;
-
       margin-bottom:10px;
-
       font-size:26px;
-
     }
 
     .project-content p{
-
       line-height:1.7;
-
       color:#d8d8d8;
-
     }
 
     /* CONTACT */
 
     .contact-box{
-
       max-width:700px;
-
       margin:auto;
-
       text-align:center;
 
       background:#10214d;
 
       padding:50px;
-
       border-radius:30px;
-
     }
 
     .contact-box p{
-
       font-size:20px;
-
       margin-bottom:15px;
-
     }
 
     /* FOOTER */
 
     footer{
-
       background:#040b1f;
-
       text-align:center;
-
       padding:25px;
-
       color:#d0d0d0;
-
     }
 
     /* RESPONSIVE */
@@ -688,15 +395,11 @@
     @media(max-width:1000px){
 
       .professional-grid{
-
         grid-template-columns:1fr;
-
       }
 
       .soft-skills ul{
-
         columns:1;
-
       }
 
     }
@@ -704,56 +407,45 @@
     @media(max-width:768px){
 
       nav{
-
         display:none;
-
       }
 
       .hero{
-
         flex-direction:column-reverse;
-
         text-align:center;
-
       }
 
       .hero-text h1{
-
-        font-size:42px;
-
+        font-size:46px;
       }
 
       .hero-text h2{
-
         font-size:24px;
-
       }
 
       .hero-img img{
-
         width:280px;
         height:280px;
-
       }
 
       .social-icons{
-
         justify-content:center;
-
       }
 
       .section-title{
-
         font-size:42px;
-
       }
 
-      .typing-text{
+      .skill-card{
+        padding:30px;
+      }
 
-        white-space:normal;
-        border-right:none;
-        width:100%;
+      .skill-card h3{
+        font-size:24px;
+      }
 
+      .skill-card ul li{
+        font-size:16px;
       }
 
     }
@@ -773,17 +465,10 @@
     <nav>
 
       <a href="#home">Home</a>
-
       <a href="#about">About</a>
-
       <a href="#skills">Skills</a>
-
-      <a href="#certificates">Certificates</a>
-
       <a href="#services">Services</a>
-
       <a href="#projects">Projects</a>
-
       <a href="#contact">Contact</a>
 
     </nav>
@@ -796,9 +481,7 @@
 
     <div class="hero-text">
 
-      <h1 class="typing-text">
-        Hello, I'm <span>Vildah Apondi</span>
-      </h1>
+      <h1>Hello, I'm <span>Vildah Apondi</span></h1>
 
       <h2>Professional Virtual Assistant</h2>
 
@@ -816,28 +499,22 @@
       <div class="social-icons">
 
         <a href="https://wa.me/254757428735" target="_blank">
-
           <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-
         </a>
 
         <a href="https://linkedin.com/in/vildahapondivah" target="_blank">
-
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-
         </a>
 
         <a href="https://instagram.com/moxie.megan" target="_blank">
-
           <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-
         </a>
 
       </div>
 
     </div>
 
-    <div class="hero-img reveal">
+    <div class="hero-img">
 
       <img src="https://www.image2url.com/r2/default/images/1779443453212-284d03df-e480-465d-84a6-a92a23907160.png">
 
@@ -849,11 +526,11 @@
 
   <section id="about">
 
-    <h2 class="section-title reveal">About Me</h2>
+    <h2 class="section-title">About Me</h2>
 
     <div class="about-grid">
 
-      <div class="about-card reveal">
+      <div class="about-card">
 
         <h3>Professional Background</h3>
 
@@ -867,7 +544,7 @@
 
       </div>
 
-      <div class="about-card reveal">
+      <div class="about-card">
 
         <h3>Core Expertise</h3>
 
@@ -889,11 +566,13 @@
 
   <section id="skills">
 
-    <h2 class="section-title reveal">Professional Skills</h2>
+    <h2 class="section-title">Professional Skills</h2>
 
     <div class="professional-grid">
 
-      <div class="skill-card reveal">
+      <!-- CARD 1 -->
+
+      <div class="skill-card">
 
         <h3>Administrative & Executive Support</h3>
 
@@ -917,7 +596,9 @@
 
       </div>
 
-      <div class="skill-card reveal">
+      <!-- CARD 2 -->
+
+      <div class="skill-card">
 
         <h3>Communication & Correspondence</h3>
 
@@ -937,7 +618,9 @@
 
       </div>
 
-      <div class="skill-card reveal">
+      <!-- CARD 3 -->
+
+      <div class="skill-card">
 
         <h3>Project & Task Coordination</h3>
 
@@ -957,7 +640,9 @@
 
       </div>
 
-      <div class="skill-card reveal">
+      <!-- CARD 4 -->
+
+      <div class="skill-card">
 
         <h3>Tech & Tools Proficiency</h3>
 
@@ -979,7 +664,9 @@
 
       </div>
 
-      <div class="skill-card soft-skills reveal">
+      <!-- CARD 5 -->
+
+      <div class="skill-card soft-skills">
 
         <h3>Soft Skills</h3>
 
@@ -1005,49 +692,15 @@
 
   </section>
 
-  <!-- CERTIFICATES -->
-
-  <section id="certificates">
-
-    <h2 class="section-title reveal">Certificates</h2>
-
-    <div class="certificate-container">
-
-      <div class="certificate-card reveal">
-
-        <a href="https://i.imgur.com/vw7ZGh0.jpeg" target="_blank">
-
-          <img
-          src="https://i.imgur.com/vw7ZGh0.jpeg"
-          alt="Certificate"
-          class="certificate-image"
-          >
-
-        </a>
-
-        <div class="certificate-content">
-
-          <h3>Virtual Assistant Certificate</h3>
-
-          <p>Issued by Novapex Training Centre</p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
   <!-- SERVICES -->
 
   <section id="services">
 
-    <h2 class="section-title reveal">My Services</h2>
+    <h2 class="section-title">My Services</h2>
 
     <div class="services-grid">
 
-      <div class="service-box reveal">
+      <div class="service-box">
 
         <h3>Administrative Support</h3>
 
@@ -1060,7 +713,7 @@
 
       </div>
 
-      <div class="service-box reveal">
+      <div class="service-box">
 
         <h3>Content & Marketing Support</h3>
 
@@ -1073,7 +726,7 @@
 
       </div>
 
-      <div class="service-box reveal">
+      <div class="service-box">
 
         <h3>Customer Support</h3>
 
@@ -1095,11 +748,11 @@
 
   <section id="projects">
 
-    <h2 class="section-title reveal">Projects</h2>
+    <h2 class="section-title">Projects</h2>
 
     <div class="projects-grid">
 
-      <div class="project-card reveal">
+      <div class="project-card">
 
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop">
 
@@ -1118,7 +771,7 @@
 
       </div>
 
-      <div class="project-card reveal">
+      <div class="project-card">
 
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop">
 
@@ -1137,7 +790,7 @@
 
       </div>
 
-      <div class="project-card reveal">
+      <div class="project-card">
 
         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop">
 
@@ -1164,9 +817,9 @@
 
   <section id="contact">
 
-    <h2 class="section-title reveal">Let's Work Together</h2>
+    <h2 class="section-title">Let's Work Together</h2>
 
-    <div class="contact-box reveal">
+    <div class="contact-box">
 
       <p>Email: tylerknine@gmail.com</p>
 
@@ -1174,7 +827,7 @@
 
       <br>
 
-      <a href="mailto:tylerknine@gmail.com" class="btn">
+      <a href="tylerknine@gmail.com" class="btn">
 
         Hire Me
 
@@ -1192,38 +845,5 @@
 
   </footer>
 
-  <!-- SCROLL REVEAL SCRIPT -->
-
-  <script>
-
-    function revealElements(){
-
-      let reveals=document.querySelectorAll(".reveal");
-
-      for(let i=0;i<reveals.length;i++){
-
-        let windowHeight=window.innerHeight;
-
-        let revealTop=reveals[i].getBoundingClientRect().top;
-
-        let revealPoint=100;
-
-        if(revealTop < windowHeight - revealPoint){
-
-          reveals[i].classList.add("active");
-
-        }
-
-      }
-
-    }
-
-    window.addEventListener("scroll",revealElements);
-
-    revealElements();
-
-  </script>
-
 </body>
-
 </html>
