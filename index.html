@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Vildah Apondi | Virtual Assistant</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
 
@@ -22,56 +22,64 @@
     }
 
     body{
-      background:#0f172a;
+      background:#07122f;
       color:white;
-      line-height:1.6;
+      overflow-x:hidden;
     }
+
+    section{
+      padding:110px 8%;
+    }
+
+    /* HEADER */
 
     header{
       position:fixed;
       width:100%;
       top:0;
       left:0;
-      background:rgba(15,23,42,0.95);
-      backdrop-filter:blur(10px);
       z-index:1000;
-      padding:15px 8%;
+      background:rgba(7,18,47,0.95);
+      backdrop-filter:blur(12px);
+      padding:18px 8%;
+
       display:flex;
-      justify-content:space-between;
       align-items:center;
+      justify-content:space-between;
     }
 
     .logo{
-      font-size:24px;
-      font-weight:700;
-      color:#38bdf8;
+      font-size:28px;
+      font-weight:800;
+      color:#22b8ff;
+    }
+
+    nav{
+      display:flex;
+      gap:25px;
     }
 
     nav a{
       color:white;
       text-decoration:none;
-      margin-left:20px;
-      transition:0.3s;
       font-weight:500;
+      transition:0.3s;
     }
 
     nav a:hover{
-      color:#38bdf8;
-    }
-
-    section{
-      min-height:100vh;
-      padding:120px 8% 80px;
+      color:#22b8ff;
     }
 
     /* HERO */
 
     .hero{
+      min-height:100vh;
+
       display:flex;
       align-items:center;
       justify-content:space-between;
-      flex-wrap:wrap;
       gap:50px;
+      flex-wrap:wrap;
     }
 
     .hero-text{
@@ -80,40 +88,42 @@
     }
 
     .hero-text h1{
-      font-size:56px;
-      line-height:1.2;
+      font-size:62px;
+      line-height:1.1;
+      margin-bottom:15px;
     }
 
     .hero-text h1 span{
-      color:#38bdf8;
+      color:#22b8ff;
     }
 
     .hero-text h2{
-      margin-top:15px;
-      font-size:28px;
-      color:#cbd5e1;
+      font-size:30px;
+      color:#d6d6d6;
+      margin-bottom:20px;
     }
 
     .hero-text p{
-      margin:25px 0;
-      color:#cbd5e1;
+      color:#d7d7d7;
       max-width:650px;
+      line-height:1.8;
+      margin-bottom:30px;
     }
 
     .btn{
       display:inline-block;
-      background:#38bdf8;
-      color:#0f172a;
-      padding:13px 28px;
-      border-radius:40px;
+      padding:14px 32px;
+      background:#22b8ff;
+      color:#07122f;
       text-decoration:none;
-      font-weight:600;
+      font-weight:700;
+      border-radius:50px;
       transition:0.3s;
     }
 
     .btn:hover{
-      transform:translateY(-4px);
-      box-shadow:0 10px 25px rgba(56,189,248,0.4);
+      transform:translateY(-5px);
+      box-shadow:0 10px 30px rgba(34,184,255,0.4);
     }
 
     .hero-img{
@@ -122,43 +132,82 @@
     }
 
     .hero-img img{
-      width:340px;
-      height:340px;
+      width:350px;
+      height:350px;
       object-fit:cover;
       border-radius:50%;
-      border:5px solid #38bdf8;
-      box-shadow:0 0 35px rgba(56,189,248,0.4);
+      border:5px solid #22b8ff;
+      box-shadow:0 0 40px rgba(34,184,255,0.4);
+    }
+
+    /* SOCIAL */
+
+    .social-icons{
+      display:flex;
+      gap:18px;
+      margin-top:30px;
+    }
+
+    .social-icons a{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:#10214d;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      background:#22b8ff;
+      transform:translateY(-5px);
+    }
+
+    .social-icons img{
+      width:28px;
     }
 
     /* TITLES */
 
     .section-title{
       text-align:center;
-      font-size:42px;
-      margin-bottom:60px;
-      color:#38bdf8;
-    }
-
-    /* CARDS */
-
-    .card{
-      background:#1e293b;
-      padding:30px;
-      border-radius:22px;
-      box-shadow:0 0 20px rgba(0,0,0,0.25);
-      transition:0.3s;
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
+      font-size:56px;
+      font-weight:800;
+      color:#22b8ff;
+      margin-bottom:70px;
     }
 
     /* ABOUT */
 
-    .about{
+    .about-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
       gap:30px;
+    }
+
+    .about-card{
+      background:#10214d;
+      padding:35px;
+      border-radius:30px;
+      transition:0.3s;
+    }
+
+    .about-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .about-card h3{
+      color:#22b8ff;
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    .about-card p{
+      color:#e1e1e1;
+      line-height:1.8;
     }
 
     /* PROFESSIONAL SKILLS */
@@ -166,36 +215,74 @@
     .professional-grid{
       display:grid;
       grid-template-columns:repeat(2,1fr);
-      gap:25px;
+      gap:28px;
     }
 
     .skill-card{
-      background:#ffffff;
+
+      background:
+      linear-gradient(
+      135deg,
+      #fff5b7,
+      #f3c34d,
+      #f7dc77,
+      #c6921d
+      );
+
       color:#111827;
-      border-radius:20px;
-      padding:30px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+      padding:40px;
+
+      border-radius:28px;
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,0.35),
+      inset 0 0 25px rgba(255,255,255,0.25);
+
       transition:0.3s;
+
+      background-size:200% 200%;
+
+      animation:goldFlow 8s ease infinite;
+    }
+
+    @keyframes goldFlow{
+
+      0%{
+        background-position:0% 50%;
+      }
+
+      50%{
+        background-position:100% 50%;
+      }
+
+      100%{
+        background-position:0% 50%;
+      }
+
     }
 
     .skill-card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-8px);
     }
 
     .skill-card h3{
-      font-size:28px;
-      margin-bottom:20px;
-      color:#0f172a;
+      color:#22b8ff;
+      font-size:30px;
+      font-weight:800;
+      margin-bottom:25px;
+      line-height:1.3;
     }
 
     .skill-card ul{
-      padding-left:20px;
+      padding-left:25px;
     }
 
     .skill-card ul li{
-      margin-bottom:12px;
-      font-size:15px;
+      margin-bottom:16px;
       line-height:1.7;
+      font-size:18px;
+      font-weight:500;
     }
 
     .soft-skills{
@@ -210,90 +297,70 @@
 
     .services-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:25px;
-      margin-top:30px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
     }
 
     .service-box{
-      background:#1e293b;
-      padding:30px;
-      border-radius:20px;
+      background:#10214d;
+      padding:35px;
+      border-radius:30px;
       transition:0.3s;
     }
 
     .service-box:hover{
-      transform:translateY(-5px);
+      transform:translateY(-6px);
     }
 
     .service-box h3{
+      color:#22b8ff;
+      font-size:28px;
       margin-bottom:15px;
-      color:#38bdf8;
+    }
+
+    .service-box p{
+      line-height:1.8;
+      color:#d7d7d7;
     }
 
     /* PROJECTS */
 
-    .projects{
+    .projects-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
     }
 
     .project-card{
-      background:#1e293b;
-      border-radius:20px;
+      background:#10214d;
+      border-radius:28px;
       overflow:hidden;
       transition:0.3s;
-      box-shadow:0 0 20px rgba(0,0,0,0.2);
     }
 
     .project-card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-6px);
     }
 
     .project-card img{
       width:100%;
-      height:220px;
+      height:240px;
       object-fit:cover;
     }
 
     .project-content{
-      padding:22px;
+      padding:30px;
     }
 
     .project-content h3{
+      color:#22b8ff;
       margin-bottom:10px;
-      color:#38bdf8;
+      font-size:26px;
     }
 
-    /* SOCIAL */
-
-    .social-icons{
-      margin-top:25px;
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-
-    .social-icons a{
-      width:55px;
-      height:55px;
-      background:#1e293b;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      transition:0.3s;
-    }
-
-    .social-icons a:hover{
-      background:#38bdf8;
-      transform:translateY(-5px);
-    }
-
-    .social-icons img{
-      width:28px;
-      height:28px;
+    .project-content p{
+      line-height:1.7;
+      color:#d8d8d8;
     }
 
     /* CONTACT */
@@ -302,20 +369,30 @@
       max-width:700px;
       margin:auto;
       text-align:center;
+
+      background:#10214d;
+
+      padding:50px;
+      border-radius:30px;
+    }
+
+    .contact-box p{
+      font-size:20px;
+      margin-bottom:15px;
     }
 
     /* FOOTER */
 
     footer{
-      background:#020617;
+      background:#040b1f;
       text-align:center;
       padding:25px;
-      color:#94a3b8;
+      color:#d0d0d0;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
 
-    @media(max-width:900px){
+    @media(max-width:1000px){
 
       .professional-grid{
         grid-template-columns:1fr;
@@ -339,20 +416,36 @@
       }
 
       .hero-text h1{
-        font-size:42px;
+        font-size:46px;
       }
 
       .hero-text h2{
-        font-size:22px;
+        font-size:24px;
+      }
+
+      .hero-img img{
+        width:280px;
+        height:280px;
       }
 
       .social-icons{
         justify-content:center;
       }
 
-      .hero-img img{
-        width:280px;
-        height:280px;
+      .section-title{
+        font-size:42px;
+      }
+
+      .skill-card{
+        padding:30px;
+      }
+
+      .skill-card h3{
+        font-size:24px;
+      }
+
+      .skill-card ul li{
+        font-size:16px;
       }
 
     }
@@ -370,19 +463,21 @@
     <div class="logo">MyPortfolio</div>
 
     <nav>
+
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+
     </nav>
 
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
 
-  <section id="home" class="hero">
+  <section class="hero" id="home">
 
     <div class="hero-text">
 
@@ -391,12 +486,15 @@
       <h2>Professional Virtual Assistant</h2>
 
       <p>
+
         Inbox Management, Calendar Coordination, Customer Support,
-        Administrative Support, Task Coordination, and Communication
-        Management for modern businesses and entrepreneurs.
+        Administrative Assistance, Project Coordination,
+        Communication Handling, and Workflow Organization
+        for entrepreneurs and businesses.
+
       </p>
 
-      <a href="#services" class="btn">View Services</a>
+      <a href="#skills" class="btn">View Skills</a>
 
       <div class="social-icons">
 
@@ -430,27 +528,32 @@
 
     <h2 class="section-title">About Me</h2>
 
-    <div class="about">
+    <div class="about-grid">
 
-      <div class="card">
+      <div class="about-card">
 
         <h3>Professional Background</h3>
 
-        <p style="margin-top:15px;">
-          I am a professional Virtual Assistant skilled in administrative support,
-          communication management, customer support, and workflow coordination.
-          I help businesses stay productive, organized, and efficient.
+        <p>
+
+          I am a professional Virtual Assistant experienced in inbox management,
+          communication handling, customer support, calendar coordination,
+          and workflow organization.
+
         </p>
 
       </div>
 
-      <div class="card">
+      <div class="about-card">
 
         <h3>Core Expertise</h3>
 
-        <p style="margin-top:15px;">
-          Inbox Management, Calendar Scheduling, Task Coordination,
-          Client Communication, Data Management, and Travel Planning.
+        <p>
+
+          Administrative Support, Travel Scheduling,
+          Data Management, Email Handling,
+          Task Coordination, and Customer Communication.
+
         </p>
 
       </div>
@@ -459,7 +562,7 @@
 
   </section>
 
-  <!-- PROFESSIONAL SKILLS -->
+  <!-- SKILLS -->
 
   <section id="skills">
 
@@ -467,86 +570,120 @@
 
     <div class="professional-grid">
 
-      <!-- LEFT TOP -->
+      <!-- CARD 1 -->
 
       <div class="skill-card">
 
         <h3>Administrative & Executive Support</h3>
 
         <ul>
+
           <li>Calendar & inbox management</li>
+
           <li>Scheduling meetings, calls, and appointments</li>
+
           <li>Travel planning & itinerary coordination</li>
+
           <li>Document creation, formatting, and editing</li>
+
           <li>Preparing reports, presentations, and meeting minutes</li>
+
           <li>Managing CRMs and client databases</li>
+
           <li>Filing and digital organization of records</li>
+
         </ul>
 
       </div>
 
-      <!-- RIGHT TOP -->
+      <!-- CARD 2 -->
 
       <div class="skill-card">
 
         <h3>Communication & Correspondence</h3>
 
         <ul>
+
           <li>Professional email handling & etiquette</li>
+
           <li>Drafting and proofreading business communication</li>
+
           <li>Client follow-ups and lead nurturing</li>
+
           <li>Creating and managing email templates</li>
+
           <li>Using CC/BCC appropriately for updates</li>
+
         </ul>
 
       </div>
 
-      <!-- LEFT BOTTOM -->
+      <!-- CARD 3 -->
 
       <div class="skill-card">
 
         <h3>Project & Task Coordination</h3>
 
         <ul>
+
           <li>Task tracking using Trello, ClickUp, or Notion</li>
+
           <li>Daily, weekly, and monthly planning</li>
+
           <li>Workflow management and deadline tracking</li>
+
           <li>Team collaboration and status reporting</li>
+
           <li>Standard operating procedure documentation</li>
+
         </ul>
 
       </div>
 
-      <!-- RIGHT BOTTOM -->
+      <!-- CARD 4 -->
 
       <div class="skill-card">
 
         <h3>Tech & Tools Proficiency</h3>
 
         <ul>
+
           <li>Google Workspace (Docs, Sheets, Calendar, Gmail)</li>
+
           <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+
           <li>Slack, Zoom, and Microsoft Teams</li>
+
           <li>Canva for basic designs & branded socials</li>
+
           <li>ChatGPT & Grammarly assistance</li>
+
           <li>Notion | Trello | ClickUp | Asana</li>
+
         </ul>
 
       </div>
 
-      <!-- SOFT SKILLS -->
+      <!-- CARD 5 -->
 
       <div class="skill-card soft-skills">
 
         <h3>Soft Skills</h3>
 
         <ul>
+
           <li>Excellent time management</li>
+
           <li>Strong attention to detail</li>
+
           <li>Problem-solving & initiative-taking</li>
+
           <li>Confidentiality & discretion</li>
+
           <li>Adaptability and multitasking</li>
+
           <li>Clear written and verbal communication</li>
+
         </ul>
 
       </div>
@@ -564,18 +701,43 @@
     <div class="services-grid">
 
       <div class="service-box">
+
         <h3>Administrative Support</h3>
-        <p>Calendar management, inbox handling, travel scheduling, and task organization.</p>
+
+        <p>
+
+          Inbox management, scheduling,
+          travel planning, and task coordination.
+
+        </p>
+
       </div>
 
       <div class="service-box">
+
         <h3>Content & Marketing Support</h3>
-        <p>Social media assistance, Canva design support, and communication management.</p>
+
+        <p>
+
+          Canva support, social media coordination,
+          and communication management.
+
+        </p>
+
       </div>
 
       <div class="service-box">
+
         <h3>Customer Support</h3>
-        <p>Professional client communication and timely customer assistance.</p>
+
+        <p>
+
+          Professional client handling,
+          customer communication,
+          and assistance.
+
+        </p>
+
       </div>
 
     </div>
@@ -588,15 +750,23 @@
 
     <h2 class="section-title">Projects</h2>
 
-    <div class="projects">
+    <div class="projects-grid">
 
       <div class="project-card">
 
         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop">
 
         <div class="project-content">
+
           <h3>Inbox Management</h3>
-          <p>Organized professional email communication and client follow-ups.</p>
+
+          <p>
+
+            Organized and managed professional
+            email communication efficiently.
+
+          </p>
+
         </div>
 
       </div>
@@ -606,8 +776,16 @@
         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop">
 
         <div class="project-content">
+
           <h3>Calendar Coordination</h3>
-          <p>Managed appointments and scheduled meetings across time zones.</p>
+
+          <p>
+
+            Scheduled meetings and managed
+            appointments across multiple time zones.
+
+          </p>
+
         </div>
 
       </div>
@@ -617,8 +795,16 @@
         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop">
 
         <div class="project-content">
+
           <h3>Customer Support</h3>
-          <p>Provided professional assistance and handled customer inquiries.</p>
+
+          <p>
+
+            Provided timely customer assistance
+            and handled client inquiries professionally.
+
+          </p>
+
         </div>
 
       </div>
@@ -633,17 +819,19 @@
 
     <h2 class="section-title">Let's Work Together</h2>
 
-    <div class="card contact-box">
+    <div class="contact-box">
 
       <p>Email: tylerknine@gmail.com</p>
 
-      <p style="margin-top:10px;">
-        WhatsApp: +254 757 428 735
-      </p>
+      <p>WhatsApp: +254 757 428 735</p>
 
       <br>
 
-      <a href="mailto:tylerknine@gmail.com" class="btn">Hire Me</a>
+      <a href="mailto:tylerknine@gmail.com" class="btn">
+
+        Hire Me
+
+      </a>
 
     </div>
 
