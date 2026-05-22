@@ -1,121 +1,624 @@
-  <!-- PROFESSIONAL SKILLS SECTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <section id="professional-skills">
+  <title>Vildah Apondi | Virtual Assistant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      line-height:1.6;
+    }
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      left:0;
+      background:rgba(15,23,42,0.95);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+      padding:15px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+      color:#38bdf8;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    section{
+      min-height:100vh;
+      padding:120px 8% 80px;
+    }
+
+    /* HERO */
+
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:50px;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-text h1{
+      font-size:56px;
+      line-height:1.2;
+    }
+
+    .hero-text h1 span{
+      color:#38bdf8;
+    }
+
+    .hero-text h2{
+      margin-top:15px;
+      font-size:28px;
+      color:#cbd5e1;
+    }
+
+    .hero-text p{
+      margin:25px 0;
+      color:#cbd5e1;
+      max-width:650px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#38bdf8;
+      color:#0f172a;
+      padding:13px 28px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 25px rgba(56,189,248,0.4);
+    }
+
+    .hero-img{
+      flex:1;
+      text-align:center;
+    }
+
+    .hero-img img{
+      width:340px;
+      height:340px;
+      object-fit:cover;
+      border-radius:50%;
+      border:5px solid #38bdf8;
+      box-shadow:0 0 35px rgba(56,189,248,0.4);
+    }
+
+    /* TITLES */
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:60px;
+      color:#38bdf8;
+    }
+
+    /* CARDS */
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:22px;
+      box-shadow:0 0 20px rgba(0,0,0,0.25);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    /* PROFESSIONAL SKILLS */
+
+    .professional-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:25px;
+    }
+
+    .skill-card{
+      background:#ffffff;
+      color:#111827;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+      transition:0.3s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .skill-card h3{
+      font-size:28px;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .skill-card ul{
+      padding-left:20px;
+    }
+
+    .skill-card ul li{
+      margin-bottom:12px;
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    .soft-skills{
+      grid-column:1/-1;
+    }
+
+    .soft-skills ul{
+      columns:2;
+    }
+
+    /* SERVICES */
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .service-box{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .service-box:hover{
+      transform:translateY(-5px);
+    }
+
+    .service-box h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    /* PROJECTS */
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .project-card{
+      background:#1e293b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.3s;
+      box-shadow:0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .project-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .project-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:22px;
+    }
+
+    .project-content h3{
+      margin-bottom:10px;
+      color:#38bdf8;
+    }
+
+    /* SOCIAL */
+
+    .social-icons{
+      margin-top:25px;
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .social-icons a{
+      width:55px;
+      height:55px;
+      background:#1e293b;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      background:#38bdf8;
+      transform:translateY(-5px);
+    }
+
+    .social-icons img{
+      width:28px;
+      height:28px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      max-width:700px;
+      margin:auto;
+      text-align:center;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#020617;
+      text-align:center;
+      padding:25px;
+      color:#94a3b8;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .professional-grid{
+        grid-template-columns:1fr;
+      }
+
+      .soft-skills ul{
+        columns:1;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        display:none;
+      }
+
+      .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .hero-text h2{
+        font-size:22px;
+      }
+
+      .social-icons{
+        justify-content:center;
+      }
+
+      .hero-img img{
+        width:280px;
+        height:280px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">MyPortfolio</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO SECTION -->
+
+  <section id="home" class="hero">
+
+    <div class="hero-text">
+
+      <h1>Hello, I'm <span>Vildah Apondi</span></h1>
+
+      <h2>Professional Virtual Assistant</h2>
+
+      <p>
+        Inbox Management, Calendar Coordination, Customer Support,
+        Administrative Support, Task Coordination, and Communication
+        Management for modern businesses and entrepreneurs.
+      </p>
+
+      <a href="#services" class="btn">View Services</a>
+
+      <div class="social-icons">
+
+        <a href="https://wa.me/254757428735" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+        </a>
+
+        <a href="https://linkedin.com/in/vildahapondivah" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
+        </a>
+
+        <a href="https://instagram.com/moxie.megan" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-img">
+
+      <img src="https://www.image2url.com/r2/default/images/1779443453212-284d03df-e480-465d-84a6-a92a23907160.png">
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+      <div class="card">
+
+        <h3>Professional Background</h3>
+
+        <p style="margin-top:15px;">
+          I am a professional Virtual Assistant skilled in administrative support,
+          communication management, customer support, and workflow coordination.
+          I help businesses stay productive, organized, and efficient.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Core Expertise</h3>
+
+        <p style="margin-top:15px;">
+          Inbox Management, Calendar Scheduling, Task Coordination,
+          Client Communication, Data Management, and Travel Planning.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROFESSIONAL SKILLS -->
+
+  <section id="skills">
 
     <h2 class="section-title">Professional Skills</h2>
 
+    <div class="professional-grid">
+
+      <!-- LEFT TOP -->
+
+      <div class="skill-card">
+
+        <h3>Administrative & Executive Support</h3>
+
+        <ul>
+          <li>Calendar & inbox management</li>
+          <li>Scheduling meetings, calls, and appointments</li>
+          <li>Travel planning & itinerary coordination</li>
+          <li>Document creation, formatting, and editing</li>
+          <li>Preparing reports, presentations, and meeting minutes</li>
+          <li>Managing CRMs and client databases</li>
+          <li>Filing and digital organization of records</li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT TOP -->
+
+      <div class="skill-card">
+
+        <h3>Communication & Correspondence</h3>
+
+        <ul>
+          <li>Professional email handling & etiquette</li>
+          <li>Drafting and proofreading business communication</li>
+          <li>Client follow-ups and lead nurturing</li>
+          <li>Creating and managing email templates</li>
+          <li>Using CC/BCC appropriately for updates</li>
+        </ul>
+
+      </div>
+
+      <!-- LEFT BOTTOM -->
+
+      <div class="skill-card">
+
+        <h3>Project & Task Coordination</h3>
+
+        <ul>
+          <li>Task tracking using Trello, ClickUp, or Notion</li>
+          <li>Daily, weekly, and monthly planning</li>
+          <li>Workflow management and deadline tracking</li>
+          <li>Team collaboration and status reporting</li>
+          <li>Standard operating procedure documentation</li>
+        </ul>
+
+      </div>
+
+      <!-- RIGHT BOTTOM -->
+
+      <div class="skill-card">
+
+        <h3>Tech & Tools Proficiency</h3>
+
+        <ul>
+          <li>Google Workspace (Docs, Sheets, Calendar, Gmail)</li>
+          <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+          <li>Slack, Zoom, and Microsoft Teams</li>
+          <li>Canva for basic designs & branded socials</li>
+          <li>ChatGPT & Grammarly assistance</li>
+          <li>Notion | Trello | ClickUp | Asana</li>
+        </ul>
+
+      </div>
+
+      <!-- SOFT SKILLS -->
+
+      <div class="skill-card soft-skills">
+
+        <h3>Soft Skills</h3>
+
+        <ul>
+          <li>Excellent time management</li>
+          <li>Strong attention to detail</li>
+          <li>Problem-solving & initiative-taking</li>
+          <li>Confidentiality & discretion</li>
+          <li>Adaptability and multitasking</li>
+          <li>Clear written and verbal communication</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section id="services">
+
+    <h2 class="section-title">My Services</h2>
+
+    <div class="services-grid">
+
+      <div class="service-box">
+        <h3>Administrative Support</h3>
+        <p>Calendar management, inbox handling, travel scheduling, and task organization.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Content & Marketing Support</h3>
+        <p>Social media assistance, Canva design support, and communication management.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Customer Support</h3>
+        <p>Professional client communication and timely customer assistance.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
     <div class="projects">
 
-      <!-- Administrative & Executive Support -->
-
       <div class="project-card">
 
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop">
+
         <div class="project-content">
-
-          <h3>Administrative & Executive Support</h3>
-
-          <ul style="margin-top:15px; padding-left:20px; color:#cbd5e1;">
-
-            <li>Calendar & inbox management</li>
-            <li>Scheduling meetings, calls, and appointments</li>
-            <li>Travel planning & itinerary coordination</li>
-            <li>Document creation, formatting, and editing</li>
-            <li>Preparing reports, presentations, and meeting minutes</li>
-            <li>Managing CRMs and client databases</li>
-            <li>Filing and digital organization of records</li>
-
-          </ul>
-
+          <h3>Inbox Management</h3>
+          <p>Organized professional email communication and client follow-ups.</p>
         </div>
 
       </div>
 
-      <!-- Communication -->
-
       <div class="project-card">
 
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop">
+
         <div class="project-content">
-
-          <h3>Communication & Correspondence</h3>
-
-          <ul style="margin-top:15px; padding-left:20px; color:#cbd5e1;">
-
-            <li>Professional email handling & etiquette</li>
-            <li>Drafting and proofreading business communication</li>
-            <li>Client follow-ups and lead nurturing</li>
-            <li>Creating and managing email templates</li>
-            <li>Using CC/BCC appropriately for team or client updates</li>
-
-          </ul>
-
+          <h3>Calendar Coordination</h3>
+          <p>Managed appointments and scheduled meetings across time zones.</p>
         </div>
 
       </div>
 
-      <!-- Project Coordination -->
-
       <div class="project-card">
 
-        <div class="project-content">
-
-          <h3>Project & Task Coordination</h3>
-
-          <ul style="margin-top:15px; padding-left:20px; color:#cbd5e1;">
-
-            <li>Task tracking using Trello, ClickUp, or Notion</li>
-            <li>Daily, weekly, and monthly planning</li>
-            <li>Workflow management and deadline tracking</li>
-            <li>Team collaboration and status reporting</li>
-            <li>Standard operating procedure (SOP) documentation</li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <!-- Tech & Tools -->
-
-      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop">
 
         <div class="project-content">
-
-          <h3>Tech & Tools Proficiency</h3>
-
-          <ul style="margin-top:15px; padding-left:20px; color:#cbd5e1;">
-
-            <li>Google Workspace (Docs, Sheets, Calendar, Gmail)</li>
-            <li>Microsoft Office (Word, Excel, PowerPoint)</li>
-            <li>Slack, Zoom, and Microsoft Teams</li>
-            <li>Canva for basic designs & branded socials</li>
-            <li>ChatGPT & Grammarly (for writing assistance)</li>
-            <li>Notion | Trello | ClickUp | Asana</li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <!-- Soft Skills -->
-
-      <div class="project-card" style="grid-column:1/-1;">
-
-        <div class="project-content">
-
-          <h3>Soft Skills</h3>
-
-          <ul style="margin-top:15px; padding-left:20px; color:#cbd5e1; columns:2;">
-
-            <li>Excellent time management</li>
-            <li>Strong attention to detail</li>
-            <li>Problem-solving & initiative-taking</li>
-            <li>Confidentiality & discretion</li>
-            <li>Adaptability and multitasking</li>
-            <li>Clear written and verbal communication</li>
-
-          </ul>
-
+          <h3>Customer Support</h3>
+          <p>Provided professional assistance and handled customer inquiries.</p>
         </div>
 
       </div>
@@ -123,3 +626,36 @@
     </div>
 
   </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="section-title">Let's Work Together</h2>
+
+    <div class="card contact-box">
+
+      <p>Email: tylerknine@gmail.com</p>
+
+      <p style="margin-top:10px;">
+        WhatsApp: +254 757 428 735
+      </p>
+
+      <br>
+
+      <a href="mailto:tylerknine@gmail.com" class="btn">Hire Me</a>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 My Portfolio | Designed by Vildah</p>
+
+  </footer>
+
+</body>
+</html>
