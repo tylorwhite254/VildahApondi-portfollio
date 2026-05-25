@@ -6,23 +6,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vildah Apondi | Virtual Assistant</title>
+<title>Vildah Apondi | Virtual Assistant Portfolio</title>
 
+<!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 <style>
+
+/* ========================= */
+/* ROOT */
+/* ========================= */
 
 :root{
   --dark:#1a1210;
-  --dark2:#2c1a12;
-  --gold:#c9a84c;
+  --dark2:#2b1a14;
+  --gold:#d4af37;
+  --gold-light:#f3d97a;
   --brown:#8b5e3c;
   --card:#241813;
-  --text:#f5e7d1;
+  --text:#f6ead7;
 }
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
 
 *{
   margin:0;
@@ -42,7 +56,17 @@ section{
   padding:110px 8%;
 }
 
+img{
+  max-width:100%;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* ========================= */
 /* HEADER */
+/* ========================= */
 
 header{
   position:fixed;
@@ -50,30 +74,29 @@ header{
   left:0;
   width:100%;
   padding:18px 8%;
-  background:rgba(26,18,16,0.92);
+  background:rgba(15,10,8,0.95);
   backdrop-filter:blur(12px);
-  z-index:1000;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  border-bottom:1px solid rgba(201,168,76,0.2);
+  align-items:center;
+  z-index:1000;
+  border-bottom:1px solid rgba(212,175,55,0.2);
 }
 
 .logo{
-  font-size:30px;
-  font-weight:800;
+  font-size:32px;
   color:var(--gold);
+  font-weight:800;
   font-family:'Playfair Display',serif;
 }
 
 nav{
   display:flex;
-  gap:25px;
+  gap:24px;
 }
 
 nav a{
-  color:#f3dfbd;
-  text-decoration:none;
+  color:#f5dfb3;
   font-weight:500;
   transition:0.3s;
 }
@@ -82,14 +105,16 @@ nav a:hover{
   color:var(--gold);
 }
 
+/* ========================= */
 /* HERO */
+/* ========================= */
 
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:50px;
+  gap:60px;
   flex-wrap:wrap;
 }
 
@@ -100,19 +125,19 @@ nav a:hover{
 
 .hero-tag{
   display:inline-block;
+  padding:8px 20px;
   border:1px solid var(--gold);
   color:var(--gold);
-  padding:8px 18px;
-  letter-spacing:2px;
-  text-transform:uppercase;
+  border-radius:50px;
   margin-bottom:25px;
+  letter-spacing:2px;
   font-size:12px;
 }
 
 .hero-text h1{
-  font-size:68px;
+  font-size:72px;
   line-height:1.1;
-  margin-bottom:18px;
+  margin-bottom:20px;
   font-family:'Playfair Display',serif;
 }
 
@@ -121,32 +146,31 @@ nav a:hover{
 }
 
 .hero-text h2{
-  font-size:30px;
-  color:#e7c88a;
+  font-size:32px;
+  color:#efd48d;
   margin-bottom:20px;
 }
 
 .hero-text p{
-  color:#e5d8c3;
+  color:#eadfce;
+  line-height:1.9;
+  margin-bottom:35px;
   max-width:650px;
-  line-height:1.8;
-  margin-bottom:30px;
 }
 
 .btn{
   display:inline-block;
-  padding:15px 34px;
+  padding:16px 35px;
+  border-radius:50px;
   background:linear-gradient(135deg,var(--gold),var(--brown));
   color:white;
-  text-decoration:none;
   font-weight:700;
-  border-radius:50px;
   transition:0.3s;
 }
 
 .btn:hover{
   transform:translateY(-5px);
-  box-shadow:0 10px 30px rgba(201,168,76,0.35);
+  box-shadow:0 15px 40px rgba(212,175,55,0.3);
 }
 
 .hero-img{
@@ -155,54 +179,57 @@ nav a:hover{
 }
 
 .hero-img img{
-  width:350px;
-  height:350px;
+  width:370px;
+  height:370px;
   object-fit:cover;
   border-radius:50%;
   border:5px solid var(--gold);
-  box-shadow:0 0 40px rgba(201,168,76,0.35);
+  box-shadow:0 0 50px rgba(212,175,55,0.35);
 }
 
-/* SOCIAL */
+/* ========================= */
+/* SOCIAL ICONS */
+/* ========================= */
 
 .social-icons{
   display:flex;
   gap:18px;
-  margin-top:30px;
+  margin-top:35px;
 }
 
 .social-icons a{
-  width:55px;
-  height:55px;
+  width:58px;
+  height:58px;
   border-radius:50%;
-  background:#3a261b;
+  background:#332117;
   display:flex;
   align-items:center;
   justify-content:center;
+  color:white;
+  font-size:24px;
   transition:0.3s;
 }
 
 .social-icons a:hover{
   background:var(--gold);
-  transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
-.social-icons img{
-  width:28px;
-}
-
+/* ========================= */
 /* TITLES */
+/* ========================= */
 
 .section-title{
   text-align:center;
   font-size:56px;
-  font-weight:800;
   color:var(--gold);
   margin-bottom:70px;
   font-family:'Playfair Display',serif;
 }
 
+/* ========================= */
 /* ABOUT */
+/* ========================= */
 
 .about-grid{
   display:grid;
@@ -212,89 +239,78 @@ nav a:hover{
 
 .about-card{
   background:var(--card);
-  padding:35px;
+  padding:40px;
   border-radius:30px;
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(212,175,55,0.15);
   transition:0.3s;
 }
 
 .about-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
 }
 
 .about-card h3{
   color:var(--gold);
+  font-size:30px;
   margin-bottom:15px;
-  font-size:28px;
 }
 
 .about-card p{
-  color:#e1d5c2;
-  line-height:1.8;
+  line-height:1.9;
+  color:#eadfce;
 }
 
+/* ========================= */
 /* SKILLS */
+/* ========================= */
 
 .professional-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
 }
 
 .skill-card{
   background:var(--card);
   padding:40px;
-  border-radius:28px;
-  border:1px solid rgba(201,168,76,0.15);
-  transition:0.3s;
-}
-
-.skill-card:hover{
-  transform:translateY(-8px);
+  border-radius:30px;
+  border:1px solid rgba(212,175,55,0.15);
 }
 
 .skill-card h3{
   color:var(--gold);
-  font-size:30px;
-  margin-bottom:25px;
+  margin-bottom:20px;
+  font-size:28px;
 }
 
 .skill-card ul{
-  padding-left:25px;
+  padding-left:20px;
 }
 
-.skill-card ul li{
-  margin-bottom:16px;
-  line-height:1.7;
-  font-size:17px;
-  color:#f3e6d2;
+.skill-card li{
+  margin-bottom:15px;
+  color:#f0e2cf;
+  line-height:1.8;
 }
 
-.soft-skills{
-  grid-column:1/-1;
-}
-
-.soft-skills ul{
-  columns:2;
-}
-
+/* ========================= */
 /* CERTIFICATES */
+/* ========================= */
 
 .certificate-container{
   display:flex;
   flex-direction:column;
-  justify-content:center;
-  align-items:center;
   gap:40px;
+  align-items:center;
 }
 
 .certificate-card{
-  width:100%;
-  max-width:1000px;
   background:var(--card);
   border-radius:30px;
   overflow:hidden;
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(212,175,55,0.15);
+  max-width:1000px;
+  width:100%;
   transition:0.3s;
 }
 
@@ -305,7 +321,6 @@ nav a:hover{
 .certificate-image{
   width:100%;
   display:block;
-  background:white;
 }
 
 .certificate-content{
@@ -319,11 +334,9 @@ nav a:hover{
   margin-bottom:10px;
 }
 
-.certificate-content p{
-  color:#d8d8d8;
-}
-
+/* ========================= */
 /* SERVICES */
+/* ========================= */
 
 .services-grid{
   display:grid;
@@ -335,7 +348,7 @@ nav a:hover{
   background:var(--card);
   padding:35px;
   border-radius:30px;
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(212,175,55,0.15);
   transition:0.3s;
 }
 
@@ -343,44 +356,60 @@ nav a:hover{
   transform:translateY(-6px);
 }
 
+.service-box i{
+  font-size:42px;
+  color:var(--gold);
+  margin-bottom:20px;
+}
+
 .service-box h3{
   color:var(--gold);
-  font-size:28px;
   margin-bottom:15px;
+  font-size:28px;
 }
 
 .service-box p{
+  color:#eadfce;
   line-height:1.8;
-  color:#d7d7d7;
 }
 
+/* ========================= */
 /* TOOLS */
+/* ========================= */
 
 .tools-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:25px;
 }
 
 .tool-box{
   background:var(--card);
-  padding:25px;
-  border-radius:22px;
-  border:1px solid rgba(201,168,76,0.15);
+  padding:35px 25px;
+  border-radius:25px;
+  border:1px solid rgba(212,175,55,0.15);
   text-align:center;
   transition:0.3s;
 }
 
 .tool-box:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
+}
+
+.tool-icon{
+  width:70px;
+  height:70px;
+  margin-bottom:18px;
 }
 
 .tool-box h3{
   color:var(--gold);
-  margin-top:10px;
+  font-size:22px;
 }
 
+/* ========================= */
 /* WORK */
+/* ========================= */
 
 .work-grid{
   display:grid;
@@ -390,9 +419,9 @@ nav a:hover{
 
 .work-card{
   background:var(--card);
-  border:1px solid rgba(201,168,76,0.15);
   border-radius:28px;
   overflow:hidden;
+  border:1px solid rgba(212,175,55,0.15);
   transition:0.3s;
 }
 
@@ -402,9 +431,8 @@ nav a:hover{
 
 .work-image{
   width:100%;
-  height:230px;
+  height:240px;
   object-fit:cover;
-  display:block;
 }
 
 .work-content{
@@ -418,12 +446,13 @@ nav a:hover{
 }
 
 .work-content p{
-  line-height:1.9;
-  color:#f1e2ce;
-  font-size:17px;
+  color:#eadfce;
+  line-height:1.8;
 }
 
+/* ========================= */
 /* REVIEWS */
+/* ========================= */
 
 .reviews-grid{
   display:grid;
@@ -435,12 +464,12 @@ nav a:hover{
   background:var(--card);
   padding:30px;
   border-radius:25px;
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(212,175,55,0.15);
 }
 
 .review-card p{
   line-height:1.8;
-  color:#f1e5d4;
+  color:#f0e2cf;
   margin-bottom:20px;
 }
 
@@ -448,16 +477,18 @@ nav a:hover{
   color:var(--gold);
 }
 
+/* ========================= */
 /* CONTACT */
+/* ========================= */
 
 .contact-box{
   max-width:700px;
   margin:auto;
-  text-align:center;
   background:var(--card);
   padding:50px;
   border-radius:30px;
-  border:1px solid rgba(201,168,76,0.15);
+  border:1px solid rgba(212,175,55,0.15);
+  text-align:center;
 }
 
 .contact-item{
@@ -466,32 +497,33 @@ nav a:hover{
   justify-content:center;
   gap:15px;
   margin-bottom:20px;
-}
-
-.contact-icon{
-  width:35px;
-  height:35px;
-}
-
-.contact-box p{
   font-size:20px;
 }
 
-/* FOOTER */
-
-footer{
-  background:#100c0a;
-  text-align:center;
-  padding:25px;
-  color:#d0d0d0;
+.contact-item i{
+  color:var(--gold);
+  font-size:26px;
 }
 
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#120d0b;
+  color:#cfcfcf;
+}
+
+/* ========================= */
 /* REVEAL */
+/* ========================= */
 
 .reveal{
   opacity:0;
   transform:translateY(60px);
-  transition:all 1s ease;
+  transition:1s;
 }
 
 .reveal.active{
@@ -499,19 +531,9 @@ footer{
   transform:translateY(0);
 }
 
+/* ========================= */
 /* RESPONSIVE */
-
-@media(max-width:1000px){
-
-  .professional-grid{
-    grid-template-columns:1fr;
-  }
-
-  .soft-skills ul{
-    columns:1;
-  }
-
-}
+/* ========================= */
 
 @media(max-width:768px){
 
@@ -525,7 +547,7 @@ footer{
   }
 
   .hero-text h1{
-    font-size:44px;
+    font-size:48px;
   }
 
   .hero-img img{
@@ -549,21 +571,23 @@ footer{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-  <div class="logo">Vildah Portfolio</div>
+<div class="logo">Vildah Portfolio</div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#services">Services</a>
-    <a href="#tools">Tools</a>
-    <a href="#work">My Work</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#certificates">Certificates</a>
+<a href="#services">Services</a>
+<a href="#tools">Tools</a>
+<a href="#work">My Work</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
 
 </header>
 
@@ -571,46 +595,52 @@ footer{
 
 <section class="hero" id="home">
 
-  <div class="hero-text reveal">
+<div class="hero-text reveal">
 
-    <div class="hero-tag">Executive Virtual Assistant</div>
+<div class="hero-tag">EXECUTIVE VIRTUAL ASSISTANT</div>
 
-    <h1>Hello, I'm <span>Vildah Apondi</span></h1>
+<h1>Hello, I'm <span>Vildah Apondi</span></h1>
 
-    <h2>Professional Virtual Assistant</h2>
+<h2>Professional Virtual Assistant</h2>
 
-    <p>
-      Inbox Management, Calendar Coordination,
-      Customer Support, Administrative Assistance,
-      Project Coordination, Communication Handling,
-      and Workflow Organization.
-    </p>
+<p>
+Helping businesses stay organized through
+professional inbox management,
+calendar coordination,
+administrative support,
+workflow organization,
+and customer communication.
+</p>
 
-    <a href="#skills" class="btn">Explore My Work</a>
+<a href="#contact" class="btn">Hire Me</a>
 
-    <div class="social-icons">
+<div class="social-icons">
 
-      <a href="https://wa.me/254757428735" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-      </a>
+<a href="https://wa.me/254757428735" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
-      <a href="https://linkedin.com/in/vildahapondivah" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-      </a>
+<a href="https://linkedin.com" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
 
-      <a href="https://instagram.com/moxie.megan" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-      </a>
+<a href="https://instagram.com" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
 
-    </div>
+<a href="mailto:vildahapondi38@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
 
-  </div>
+</div>
 
-  <div class="hero-img reveal">
+</div>
 
-    <img src="https://www.image2url.com/r2/default/images/1779711441382-e303f8c4-b9fa-4056-8ea1-c5d4ff0a47b5.jpeg">
+<div class="hero-img reveal">
 
-  </div>
+<img src="https://www.image2url.com/r2/default/images/1779711441382-e303f8c4-b9fa-4056-8ea1-c5d4ff0a47b5.jpeg">
+
+</div>
 
 </section>
 
@@ -618,35 +648,30 @@ footer{
 
 <section id="about">
 
-  <h2 class="section-title reveal">About Me</h2>
+<h2 class="section-title reveal">About Me</h2>
 
-  <div class="about-grid">
+<div class="about-grid">
 
-    <div class="about-card reveal">
+<div class="about-card reveal">
+<h3>Professional Background</h3>
+<p>
+Experienced Virtual Assistant specializing in administrative support,
+task coordination, customer communication,
+calendar management, and workflow organization.
+</p>
+</div>
 
-      <h3>Professional Background</h3>
+<div class="about-card reveal">
+<h3>What I Deliver</h3>
+<p>
+Professional communication, organized scheduling,
+efficient workflow systems,
+and reliable virtual support
+for businesses and entrepreneurs.
+</p>
+</div>
 
-      <p>
-        I am a professional Virtual Assistant experienced in inbox management,
-        communication handling, customer support,
-        calendar coordination, and workflow organization.
-      </p>
-
-    </div>
-
-    <div class="about-card reveal">
-
-      <h3>Core Expertise</h3>
-
-      <p>
-        Administrative Support, Travel Scheduling,
-        Data Management, Email Handling,
-        Task Coordination, and Customer Communication.
-      </p>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
@@ -654,7 +679,39 @@ footer{
 
 <section id="skills">
 
-  <h2 class="section-title reveal">Professional Skills</h2>
+<h2 class="section-title reveal">Professional Skills</h2>
+
+<div class="professional-grid">
+
+<div class="skill-card reveal">
+<h3>Administrative Skills</h3>
+
+<ul>
+<li>Email Management</li>
+<li>Calendar Coordination</li>
+<li>Travel Scheduling</li>
+<li>Data Entry</li>
+<li>Document Organization</li>
+<li>Customer Support</li>
+</ul>
+
+</div>
+
+<div class="skill-card reveal">
+<h3>Soft Skills</h3>
+
+<ul>
+<li>Communication</li>
+<li>Time Management</li>
+<li>Problem Solving</li>
+<li>Leadership</li>
+<li>Creativity</li>
+<li>Adaptability</li>
+</ul>
+
+</div>
+
+</div>
 
 </section>
 
@@ -662,53 +719,43 @@ footer{
 
 <section id="certificates">
 
-  <h2 class="section-title reveal">Certificates</h2>
+<h2 class="section-title reveal">Certificates</h2>
 
-  <div class="certificate-container">
+<div class="certificate-container">
 
-    <div class="certificate-card reveal">
+<div class="certificate-card reveal">
 
-      <a href="https://i.imgur.com/vw7ZGh0.jpeg" target="_blank">
+<img
+src="https://i.imgur.com/vw7ZGh0.jpeg"
+class="certificate-image">
 
-        <img
-        src="https://i.imgur.com/vw7ZGh0.jpeg"
-        alt="Certificate"
-        class="certificate-image">
+<div class="certificate-content">
 
-      </a>
+<h3>Virtual Assistant Certificate</h3>
 
-      <div class="certificate-content">
+<p>Issued by Novapex Training Centre</p>
 
-        <h3>Virtual Assistant Certificate</h3>
+</div>
 
-        <p>Issued by Novapex Training Centre</p>
+</div>
 
-      </div>
+<div class="certificate-card reveal">
 
-    </div>
+<img
+src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg"
+class="certificate-image">
 
-    <div class="certificate-card reveal">
+<div class="certificate-content">
 
-      <a href="YOUR_SECOND_CERTIFICATE_URL_HERE" target="_blank">
+<h3>Certificate of Training</h3>
 
-        <img
-        src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg"
-        alt="Certificate"
-        class="certificate-image">
+<p>Issued at Golden Bridge Computer College</p>
 
-      </a>
+</div>
 
-      <div class="certificate-content">
+</div>
 
-        <h3>Certificate of Training</h3>
-
-        <p>Issued at Golden Bridge Computer College</p>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
@@ -716,26 +763,29 @@ footer{
 
 <section id="services">
 
-  <h2 class="section-title reveal">My Services</h2>
+<h2 class="section-title reveal">Services</h2>
 
-  <div class="services-grid">
+<div class="services-grid">
 
-    <div class="service-box reveal">
-      <h3>Administrative Support</h3>
-      <p>Inbox management, scheduling, travel planning, and task coordination.</p>
-    </div>
+<div class="service-box reveal">
+<i class="fas fa-envelope-open-text"></i>
+<h3>Email Management</h3>
+<p>Inbox organization, prioritization, and professional communication handling.</p>
+</div>
 
-    <div class="service-box reveal">
-      <h3>Content & Marketing Support</h3>
-      <p>Canva support, social media coordination, and communication management.</p>
-    </div>
+<div class="service-box reveal">
+<i class="fas fa-calendar-check"></i>
+<h3>Calendar Coordination</h3>
+<p>Meeting scheduling, appointment management, and workflow organization.</p>
+</div>
 
-    <div class="service-box reveal">
-      <h3>Customer Support</h3>
-      <p>Professional client handling and customer communication.</p>
-    </div>
+<div class="service-box reveal">
+<i class="fas fa-headset"></i>
+<h3>Customer Support</h3>
+<p>Professional client communication and support services.</p>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -743,20 +793,51 @@ footer{
 
 <section id="tools">
 
-  <h2 class="section-title reveal">Tools I Use</h2>
+<h2 class="section-title reveal">Tools I Use</h2>
 
-  <div class="tools-grid">
+<div class="tools-grid">
 
-    <div class="tool-box reveal"><h3>Canva</h3></div>
-    <div class="tool-box reveal"><h3>Google Workspace</h3></div>
-    <div class="tool-box reveal"><h3>Microsoft Office</h3></div>
-    <div class="tool-box reveal"><h3>Notion</h3></div>
-    <div class="tool-box reveal"><h3>ClickUp</h3></div>
-    <div class="tool-box reveal"><h3>Zoom</h3></div>
-    <div class="tool-box reveal"><h3>Slack</h3></div>
-    <div class="tool-box reveal"><h3>ChatGPT</h3></div>
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/canva/white" class="tool-icon">
+<h3>Canva</h3>
+</div>
 
-  </div>
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/googleworkspace/white" class="tool-icon">
+<h3>Google Workspace</h3>
+</div>
+
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/microsoftoffice/white" class="tool-icon">
+<h3>Microsoft Office</h3>
+</div>
+
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/notion/white" class="tool-icon">
+<h3>Notion</h3>
+</div>
+
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/clickup/white" class="tool-icon">
+<h3>ClickUp</h3>
+</div>
+
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/zoom/white" class="tool-icon">
+<h3>Zoom</h3>
+</div>
+
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/slack/white" class="tool-icon">
+<h3>Slack</h3>
+</div>
+
+<div class="tool-box reveal">
+<img src="https://cdn.simpleicons.org/openai/white" class="tool-icon">
+<h3>ChatGPT</h3>
+</div>
+
+</div>
 
 </section>
 
@@ -764,72 +845,70 @@ footer{
 
 <section id="work">
 
-  <h2 class="section-title reveal">My Work</h2>
+<h2 class="section-title reveal">My Work</h2>
 
-  <div class="work-grid">
+<div class="work-grid">
 
-    <div class="work-card reveal">
+<div class="work-card reveal">
 
-      <img
-      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
-      alt="Email Management Work"
-      class="work-image">
+<img
+src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
+class="work-image">
 
-      <div class="work-content">
+<div class="work-content">
 
-        <h3>Email Management</h3>
+<h3>Email Management</h3>
 
-        <p>
-          Professional inbox organization,
-          email prioritization, and communication
-          management for executives and businesses.
-        </p>
+<p>
+Professional inbox organization,
+email prioritization,
+and communication management.
+</p>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-    <div class="work-card reveal">
+<div class="work-card reveal">
 
-      <img
-      src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1200&auto=format&fit=crop"
-      alt="Calendar Coordination Work"
-      class="work-image">
+<img
+src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1200&auto=format&fit=crop"
+class="work-image">
 
-      <div class="work-content">
+<div class="work-content">
 
-        <h3>Calendar Coordination</h3>
+<h3>Calendar Coordination</h3>
 
-        <p>
-          Scheduling meetings, managing appointments,
-          and organizing workflows efficiently.
-        </p>
+<p>
+Meeting scheduling,
+appointment organization,
+and workflow planning.
+</p>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-    <div class="work-card reveal">
+<div class="work-card reveal">
 
-      <img
-      src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop"
-      alt="Customer Support Work"
-      class="work-image">
+<img
+src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop"
+class="work-image">
 
-      <div class="work-content">
+<div class="work-content">
 
-        <h3>Customer Support</h3>
+<h3>Customer Support</h3>
 
-        <p>
-          Providing professional customer assistance
-          and handling client inquiries effectively.
-        </p>
+<p>
+Professional customer communication
+and business support services.
+</p>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -837,26 +916,33 @@ footer{
 
 <section id="reviews">
 
-  <h2 class="section-title reveal">Client Reviews</h2>
+<h2 class="section-title reveal">Client Reviews</h2>
 
-  <div class="reviews-grid">
+<div class="reviews-grid">
 
-    <div class="review-card reveal">
-      <p>“Vildah transformed how I manage my inbox and communication. Very reliable and professional.”</p>
-      <h4>— Michael R.</h4>
-    </div>
+<div class="review-card reveal">
+<p>
+“Vildah is professional, organized,
+and very reliable with communication and scheduling.”
+</p>
+<h4>— Michael R.</h4>
+</div>
 
-    <div class="review-card reveal">
-      <p>“Her calendar management and workflow organization are excellent. Highly recommended.”</p>
-      <h4>— Amanda L.</h4>
-    </div>
+<div class="review-card reveal">
+<p>
+“Excellent virtual assistant with amazing time management skills.”
+</p>
+<h4>— Amanda L.</h4>
+</div>
 
-    <div class="review-card reveal">
-      <p>“Creative, organized, and always professional. A great virtual assistant to work with.”</p>
-      <h4>— Sophie N.</h4>
-    </div>
+<div class="review-card reveal">
+<p>
+“Creative, efficient, and highly professional in every task.”
+</p>
+<h4>— Sophie N.</h4>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -864,67 +950,63 @@ footer{
 
 <section id="contact">
 
-  <h2 class="section-title reveal">Let's Work Together</h2>
+<h2 class="section-title reveal">Let's Work Together</h2>
 
-  <div class="contact-box reveal">
+<div class="contact-box reveal">
 
-    <div class="contact-item">
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<p>vildahapondi38@gmail.com</p>
+</div>
 
-      <img
-      src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-      alt="Email Icon"
-      class="contact-icon">
+<div class="contact-item">
+<i class="fab fa-whatsapp"></i>
+<p>+254 757 428 735</p>
+</div>
 
-      <p>vildahapondi38@gmail.com</p>
+<br>
 
-    </div>
+<a href="mailto:vildahapondi38@gmail.com" class="btn">
+Hire Me
+</a>
 
-    <div class="contact-item">
-
-      <img
-      src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-      alt="WhatsApp Icon"
-      class="contact-icon">
-
-      <p>+254 757 428 735</p>
-
-    </div>
-
-    <br>
-
-    <a href="mailto:vildahapondi38@gmail.com" class="btn">
-      Hire Me
-    </a>
-
-  </div>
+</div>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio</p>
+
+<p>
+© 2026 Vildah Apondi | Virtual Assistant Portfolio
+</p>
+
 </footer>
+
+<!-- SCROLL REVEAL -->
 
 <script>
 
 function revealElements(){
 
-  let reveals=document.querySelectorAll(".reveal");
+let reveals=document.querySelectorAll(".reveal");
 
-  for(let i=0;i<reveals.length;i++){
+for(let i=0;i<reveals.length;i++){
 
-    let windowHeight=window.innerHeight;
+let windowHeight=window.innerHeight;
 
-    let revealTop=reveals[i].getBoundingClientRect().top;
+let revealTop=reveals[i].getBoundingClientRect().top;
 
-    let revealPoint=100;
+let revealPoint=100;
 
-    if(revealTop < windowHeight - revealPoint){
+if(revealTop < windowHeight - revealPoint){
 
-      reveals[i].classList.add("active");
+reveals[i].classList.add("active");
 
-    }
+}
 
-  }
+}
 
 }
 
