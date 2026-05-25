@@ -1,13 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Vildah Apondi | Virtual Assistant</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,7 +20,6 @@
   --dark2:#2c1a12;
   --gold:#c9a84c;
   --brown:#8b5e3c;
-  --light:#f7f1e8;
   --card:#241813;
   --text:#f5e7d1;
 }
@@ -57,7 +60,7 @@ header{
 }
 
 .logo{
-  font-size:28px;
+  font-size:30px;
   font-weight:800;
   color:var(--gold);
   font-family:'Playfair Display',serif;
@@ -199,22 +202,6 @@ nav a:hover{
   font-family:'Playfair Display',serif;
 }
 
-/* CARDS */
-
-.about-card,
-.service-box,
-.project-card,
-.contact-box,
-.skill-card,
-.tool-box,
-.review-card,
-.work-card,
-.certificate-card{
-  background:#241813;
-  border:1px solid rgba(201,168,76,0.15);
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
 /* ABOUT */
 
 .about-grid{
@@ -224,8 +211,10 @@ nav a:hover{
 }
 
 .about-card{
+  background:var(--card);
   padding:35px;
   border-radius:30px;
+  border:1px solid rgba(201,168,76,0.15);
   transition:0.3s;
 }
 
@@ -253,8 +242,10 @@ nav a:hover{
 }
 
 .skill-card{
+  background:var(--card);
   padding:40px;
   border-radius:28px;
+  border:1px solid rgba(201,168,76,0.15);
   transition:0.3s;
 }
 
@@ -300,8 +291,10 @@ nav a:hover{
 .certificate-card{
   width:100%;
   max-width:1000px;
+  background:var(--card);
   border-radius:30px;
   overflow:hidden;
+  border:1px solid rgba(201,168,76,0.15);
   transition:0.3s;
 }
 
@@ -339,8 +332,10 @@ nav a:hover{
 }
 
 .service-box{
+  background:var(--card);
   padding:35px;
   border-radius:30px;
+  border:1px solid rgba(201,168,76,0.15);
   transition:0.3s;
 }
 
@@ -368,8 +363,10 @@ nav a:hover{
 }
 
 .tool-box{
+  background:var(--card);
   padding:25px;
   border-radius:22px;
+  border:1px solid rgba(201,168,76,0.15);
   text-align:center;
   transition:0.3s;
 }
@@ -383,71 +380,47 @@ nav a:hover{
   margin-top:10px;
 }
 
-/* MY WORK */
+/* WORK */
 
 .work-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:30px;
 }
 
 .work-card{
-  border-radius:28px;
-  padding:30px;
-  transition:0.3s;
-}
-
-.work-card:hover{
-  transform:translateY(-6px);
-}
-
-.work-card h3{
-  color:var(--gold);
-  margin-bottom:15px;
-}
-
-.work-card p{
-  line-height:1.8;
-  color:#e4d9c9;
-}
-
-/* PROJECTS */
-
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
-}
-
-.project-card{
+  background:var(--card);
+  border:1px solid rgba(201,168,76,0.15);
   border-radius:28px;
   overflow:hidden;
   transition:0.3s;
 }
 
-.project-card:hover{
-  transform:translateY(-6px);
+.work-card:hover{
+  transform:translateY(-8px);
 }
 
-.project-card img{
+.work-image{
   width:100%;
-  height:240px;
+  height:230px;
   object-fit:cover;
+  display:block;
 }
 
-.project-content{
-  padding:30px;
+.work-content{
+  padding:28px;
 }
 
-.project-content h3{
+.work-content h3{
   color:var(--gold);
-  margin-bottom:10px;
-  font-size:26px;
+  margin-bottom:15px;
+  font-size:28px;
 }
 
-.project-content p{
-  line-height:1.7;
-  color:#d8d8d8;
+.work-content p{
+  line-height:1.9;
+  color:#f1e2ce;
+  font-size:17px;
 }
 
 /* REVIEWS */
@@ -459,8 +432,10 @@ nav a:hover{
 }
 
 .review-card{
+  background:var(--card);
   padding:30px;
   border-radius:25px;
+  border:1px solid rgba(201,168,76,0.15);
 }
 
 .review-card p{
@@ -479,8 +454,10 @@ nav a:hover{
   max-width:700px;
   margin:auto;
   text-align:center;
+  background:var(--card);
   padding:50px;
   border-radius:30px;
+  border:1px solid rgba(201,168,76,0.15);
 }
 
 .contact-item{
@@ -567,11 +544,13 @@ footer{
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
   <div class="logo">Vildah Portfolio</div>
 
   <nav>
@@ -585,6 +564,7 @@ footer{
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
 <!-- HERO -->
@@ -600,9 +580,10 @@ footer{
     <h2>Professional Virtual Assistant</h2>
 
     <p>
-      Inbox Management, Calendar Coordination, Customer Support,
-      Administrative Assistance, Project Coordination,
-      Communication Handling, and Workflow Organization.
+      Inbox Management, Calendar Coordination,
+      Customer Support, Administrative Assistance,
+      Project Coordination, Communication Handling,
+      and Workflow Organization.
     </p>
 
     <a href="#skills" class="btn">Explore My Work</a>
@@ -647,8 +628,8 @@ footer{
 
       <p>
         I am a professional Virtual Assistant experienced in inbox management,
-        communication handling, customer support, calendar coordination,
-        and workflow organization.
+        communication handling, customer support,
+        calendar coordination, and workflow organization.
       </p>
 
     </div>
@@ -674,66 +655,6 @@ footer{
 <section id="skills">
 
   <h2 class="section-title reveal">Professional Skills</h2>
-
-  <div class="professional-grid">
-
-    <div class="skill-card reveal">
-      <h3>Administrative & Executive Support</h3>
-      <ul>
-        <li>Calendar & inbox management</li>
-        <li>Scheduling meetings and appointments</li>
-        <li>Travel planning & itinerary coordination</li>
-        <li>Document creation and editing</li>
-        <li>Managing CRMs and client databases</li>
-      </ul>
-    </div>
-
-    <div class="skill-card reveal">
-      <h3>Communication & Correspondence</h3>
-      <ul>
-        <li>Professional email handling</li>
-        <li>Client follow-ups and lead nurturing</li>
-        <li>Business communication drafting</li>
-        <li>Creating email templates</li>
-        <li>Communication management</li>
-      </ul>
-    </div>
-
-    <div class="skill-card reveal">
-      <h3>Project & Task Coordination</h3>
-      <ul>
-        <li>Task tracking using Notion and ClickUp</li>
-        <li>Deadline management</li>
-        <li>Workflow optimization</li>
-        <li>Research & documentation</li>
-        <li>Team collaboration support</li>
-      </ul>
-    </div>
-
-    <div class="skill-card reveal">
-      <h3>Tech & Tools Proficiency</h3>
-      <ul>
-        <li>Google Workspace</li>
-        <li>Microsoft Office Suite</li>
-        <li>Canva & Figma</li>
-        <li>Slack, Zoom, Teams</li>
-        <li>ChatGPT & Grammarly</li>
-      </ul>
-    </div>
-
-    <div class="skill-card soft-skills reveal">
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Excellent time management</li>
-        <li>Strong attention to detail</li>
-        <li>Problem-solving</li>
-        <li>Confidentiality & discretion</li>
-        <li>Adaptability and multitasking</li>
-        <li>Professional communication</li>
-      </ul>
-    </div>
-
-  </div>
 
 </section>
 
@@ -786,8 +707,6 @@ footer{
       </div>
 
     </div>
-
-    <!-- ADD MORE CERTIFICATES BELOW -->
 
   </div>
 
@@ -850,18 +769,64 @@ footer{
   <div class="work-grid">
 
     <div class="work-card reveal">
-      <h3>Email Management</h3>
-      <p>Professional inbox organization, email prioritization, and communication management for executives and businesses.</p>
+
+      <img
+      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
+      alt="Email Management Work"
+      class="work-image">
+
+      <div class="work-content">
+
+        <h3>Email Management</h3>
+
+        <p>
+          Professional inbox organization,
+          email prioritization, and communication
+          management for executives and businesses.
+        </p>
+
+      </div>
+
     </div>
 
     <div class="work-card reveal">
-      <h3>Calendar Coordination</h3>
-      <p>Scheduling meetings, managing appointments, and organizing daily workflows efficiently.</p>
+
+      <img
+      src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1200&auto=format&fit=crop"
+      alt="Calendar Coordination Work"
+      class="work-image">
+
+      <div class="work-content">
+
+        <h3>Calendar Coordination</h3>
+
+        <p>
+          Scheduling meetings, managing appointments,
+          and organizing workflows efficiently.
+        </p>
+
+      </div>
+
     </div>
 
     <div class="work-card reveal">
-      <h3>Customer Support</h3>
-      <p>Providing professional customer assistance and handling client inquiries effectively.</p>
+
+      <img
+      src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop"
+      alt="Customer Support Work"
+      class="work-image">
+
+      <div class="work-content">
+
+        <h3>Customer Support</h3>
+
+        <p>
+          Providing professional customer assistance
+          and handling client inquiries effectively.
+        </p>
+
+      </div>
+
     </div>
 
   </div>
@@ -971,4 +936,3 @@ revealElements();
 
 </body>
 </html>
-```
