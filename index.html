@@ -51,6 +51,74 @@ a {
   text-decoration: none;
 }
 
+/* ========== ANIMATIONS ========== */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-img img {
+  animation: float 4s ease-in-out infinite;
+}
+
+.btn {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  animation: pulse-glow 1.5s infinite;
+}
+
+.skill-card, .about-card, .service-box, .tool-box, .review-card, .work-card, .certificate-card {
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.skill-card:hover, .about-card:hover, .service-box:hover, .review-card:hover, .work-card:hover, .certificate-card:hover {
+  transform: translateY(-12px) scale(1.02);
+}
+
+/* Staggered animation for grid items */
+.tools-grid .tool-box:nth-child(1) { animation-delay: 0.1s; }
+.tools-grid .tool-box:nth-child(2) { animation-delay: 0.2s; }
+.tools-grid .tool-box:nth-child(3) { animation-delay: 0.3s; }
+.tools-grid .tool-box:nth-child(4) { animation-delay: 0.4s; }
+.tools-grid .tool-box:nth-child(5) { animation-delay: 0.5s; }
+.tools-grid .tool-box:nth-child(6) { animation-delay: 0.6s; }
+.tools-grid .tool-box:nth-child(7) { animation-delay: 0.7s; }
+.tools-grid .tool-box:nth-child(8) { animation-delay: 0.8s; }
+
+.services-grid .service-box:nth-child(1) { animation-delay: 0.1s; }
+.services-grid .service-box:nth-child(2) { animation-delay: 0.2s; }
+.services-grid .service-box:nth-child(3) { animation-delay: 0.3s; }
+
+.reviews-grid .review-card:nth-child(1) { animation-delay: 0.1s; }
+.reviews-grid .review-card:nth-child(2) { animation-delay: 0.2s; }
+.reviews-grid .review-card:nth-child(3) { animation-delay: 0.3s; }
+
 /* HEADER */
 header {
   position: fixed;
@@ -66,6 +134,7 @@ header {
   z-index: 1000;
   border-bottom: 2px solid rgba(212, 175, 55, 0.3);
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -74,6 +143,12 @@ header {
   font-weight: 800;
   font-family: 'Playfair Display', serif;
   letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px rgba(212,175,55,0.6);
+  transform: scale(1.02);
 }
 
 nav {
@@ -87,6 +162,22 @@ nav a {
   font-weight: 500;
   transition: 0.3s;
   font-size: 0.95rem;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 nav a:hover {
@@ -107,6 +198,7 @@ nav a:hover {
 .hero-text {
   flex: 1;
   min-width: 300px;
+  animation: slideInLeft 1s ease-out;
 }
 
 .hero-tag {
@@ -119,6 +211,8 @@ nav a:hover {
   letter-spacing: 2.5px;
   font-size: 13px;
   font-weight: 500;
+  background: rgba(212,175,55,0.1);
+  animation: pulse-glow 2s infinite;
 }
 
 .hero-text h1 {
@@ -170,6 +264,7 @@ nav a:hover {
 .hero-img {
   flex: 1;
   text-align: center;
+  animation: slideInRight 1s ease-out;
 }
 
 .hero-img img {
@@ -184,6 +279,7 @@ nav a:hover {
 
 .hero-img img:hover {
   transform: scale(1.02);
+  box-shadow: 0 0 70px rgba(212, 175, 55, 0.7);
 }
 
 /* SOCIAL ICONS */
@@ -235,6 +331,11 @@ nav a:hover {
   background: var(--gold);
   margin: 18px auto 0;
   border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.section-title:hover:after {
+  width: 150px;
 }
 
 /* ABOUT */
@@ -288,6 +389,7 @@ nav a:hover {
 
 .skill-card:hover {
   transform: translateY(-8px);
+  border-color: var(--gold);
 }
 
 .skill-card h3 {
@@ -307,9 +409,15 @@ nav a:hover {
   line-height: 1.8;
   font-size: 1.02rem;
   list-style-type: square;
+  transition: transform 0.2s;
 }
 
-/* CERTIFICATES */
+.skill-card li:hover {
+  transform: translateX(8px);
+  color: var(--gold-light);
+}
+
+/* CERTIFICATES - ORIGINAL STYLE */
 .certificate-container {
   display: flex;
   flex-direction: column;
@@ -331,6 +439,7 @@ nav a:hover {
 .certificate-card:hover {
   transform: translateY(-8px);
   border-color: var(--gold);
+  box-shadow: 0 25px 40px rgba(212,175,55,0.2);
 }
 
 .certificate-image {
@@ -338,6 +447,11 @@ nav a:hover {
   display: block;
   max-height: 380px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .certificate-image {
+  transform: scale(1.02);
 }
 
 .certificate-content {
@@ -369,6 +483,7 @@ nav a:hover {
 
 .service-box:hover {
   transform: translateY(-8px);
+  border-color: var(--gold);
 }
 
 .service-box i {
@@ -376,6 +491,11 @@ nav a:hover {
   color: var(--gold);
   margin-bottom: 25px;
   display: inline-block;
+  transition: transform 0.3s;
+}
+
+.service-box:hover i {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .service-box h3 {
@@ -389,9 +509,7 @@ nav a:hover {
   line-height: 1.8;
 }
 
-/* ============================================ */
-/* TOOLS SECTION - 100% WORKING FONT AWESOME ICONS */
-/* ============================================ */
+/* TOOLS SECTION */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -418,7 +536,6 @@ nav a:hover {
   box-shadow: 0 28px 38px -12px rgba(212, 175, 55, 0.45);
 }
 
-/* FIXED: Using Font Awesome icons that ALWAYS work */
 .tool-icon-fa {
   font-size: 85px;
   margin-bottom: 22px;
@@ -437,7 +554,21 @@ nav a:hover {
   background: rgba(212,175,55,0.3);
 }
 
-/* Colorful icons for each tool */
+/* ChatGPT real image icon */
+.tool-icon-chatgpt-img {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 22px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.tool-box:hover .tool-icon-chatgpt-img {
+  transform: scale(1.1);
+}
+
 .tool-icon-fa.monday { color: #FF6B35; }
 .tool-icon-fa.google { color: #34A853; }
 .tool-icon-fa.microsoft { color: #F25022; }
@@ -445,7 +576,6 @@ nav a:hover {
 .tool-icon-fa.clickup { color: #7B68EE; }
 .tool-icon-fa.zoom { color: #2D8CFF; }
 .tool-icon-fa.slack { color: #E01E5A; }
-.tool-icon-fa.chatgpt { color: #10A37F; }
 
 .tool-box h3 {
   color: var(--gold);
@@ -489,12 +619,18 @@ nav a:hover {
 
 .work-card:hover {
   transform: translateY(-12px);
+  border-color: var(--gold);
 }
 
 .work-image {
   width: 100%;
   height: 260px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-image {
+  transform: scale(1.05);
 }
 
 .work-content {
@@ -512,7 +648,7 @@ nav a:hover {
   line-height: 1.8;
 }
 
-/* REVIEWS WITH CLIENT PHOTOS */
+/* REVIEWS */
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -541,6 +677,12 @@ nav a:hover {
   margin: 0 auto 20px;
   border: 3px solid var(--gold);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover .reviewer-image {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(212,175,55,0.4);
 }
 
 .review-card p {
@@ -573,6 +715,13 @@ nav a:hover {
   border-radius: 55px;
   border: 1px solid rgba(212, 175, 55, 0.3);
   text-align: center;
+  transition: all 0.3s;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(212,175,55,0.15);
 }
 
 .contact-item {
@@ -589,6 +738,11 @@ nav a:hover {
   color: var(--gold);
   font-size: 44px;
   width: 55px;
+  transition: transform 0.3s;
+}
+
+.contact-item:hover i {
+  transform: scale(1.1);
 }
 
 /* FOOTER */
@@ -640,6 +794,10 @@ footer {
     height: 80px;
     line-height: 80px;
   }
+  .tool-icon-chatgpt-img {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -687,7 +845,7 @@ footer {
 
 <!-- HERO SECTION -->
 <section class="hero" id="home">
-  <div class="hero-text reveal">
+  <div class="hero-text">
     <div class="hero-tag">EXECUTIVE VIRTUAL ASSISTANT</div>
     <h1>Hello, I'm <span>Vildah Apondi</span></h1>
     <h2>Professional Virtual Assistant</h2>
@@ -700,7 +858,7 @@ footer {
       <a href="mailto:vildahapondi38@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
-  <div class="hero-img reveal">
+  <div class="hero-img">
     <img src="https://www.image2url.com/r2/default/images/1779711441382-e303f8c4-b9fa-4056-8ea1-c5d4ff0a47b5.jpeg" alt="Vildah Apondi">
   </div>
 </section>
@@ -745,7 +903,7 @@ footer {
   </div>
 </section>
 
-<!-- CERTIFICATES -->
+<!-- CERTIFICATES - ORIGINAL STYLE RESTORED -->
 <section id="certificates">
   <h2 class="section-title reveal">Certifications</h2>
   <div class="certificate-container">
@@ -788,7 +946,7 @@ footer {
   </div>
 </section>
 
-<!-- TOOLS SECTION - USING FONT AWESOME (100% WORKING, NO BROKEN IMAGES) -->
+<!-- TOOLS SECTION - ChatGPT now uses REAL IMAGE -->
 <section id="tools">
   <h2 class="section-title reveal">Tools I Master</h2>
   <div class="tools-grid">
@@ -827,8 +985,9 @@ footer {
       <h3>Slack</h3>
       <span class="tool-hint">click to explore</span>
     </a>
+    <!-- ChatGPT with REAL IMAGE LOGO -->
     <a href="https://chat.openai.com" target="_blank" class="tool-box reveal">
-      <div class="tool-icon-fa chatgpt"><i class="fas fa-robot"></i></div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="tool-icon-chatgpt-img">
       <h3>ChatGPT</h3>
       <span class="tool-hint">click to explore</span>
     </a>
@@ -853,77 +1012,4 @@ footer {
         <p>Strategic appointment booking, time audit, and smart scheduling for executives.</p>
       </div>
     </div>
-    <div class="work-card reveal">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Customer Support">
-      <div class="work-content">
-        <h3>💬 Customer Support</h3>
-        <p>Compassionate & efficient support via chat/email, boosting retention rates.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS WITH CLIENT PHOTOS - REPLACE THESE IMAGE URLs WITH YOUR OWN -->
-<section id="reviews">
-  <h2 class="section-title reveal">Client Reviews</h2>
-  <div class="reviews-grid">
-    <div class="review-card reveal">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael" class="reviewer-image">
-      <p>“Vildah is a game-changer. Her email management saved me 15+ hours per week. Highly organized and proactive!”</p>
-      <h4>Michael R.</h4>
-      <div class="review-title">CEO, TechStart</div>
-    </div>
-    <div class="review-card reveal">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amanda" class="reviewer-image">
-      <p>“Excellent virtual assistant with amazing time management skills. She runs my calendar flawlessly.”</p>
-      <h4>Amanda L.</h4>
-      <div class="review-title">Marketing Director</div>
-    </div>
-    <div class="review-card reveal">
-      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sophie" class="reviewer-image">
-      <p>“Creative, efficient, and highly professional in every task. Vildah is my go-to partner for all admin needs.”</p>
-      <h4>Sophie N.</h4>
-      <div class="review-title">Founder, Creative Agency</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2 class="section-title reveal">Let's Work Together</h2>
-  <div class="contact-box reveal">
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <p>vildahapondi38@gmail.com</p>
-    </div>
-    <div class="contact-item">
-      <i class="fab fa-whatsapp"></i>
-      <p>+254 757 428 735</p>
-    </div>
-    <br>
-    <a href="mailto:vildahapondi38@gmail.com" class="btn">✉️ Hire Me Now</a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio — Precision & Excellence</p>
-</footer>
-
-<script>
-  function revealElements() {
-    let reveals = document.querySelectorAll(".reveal");
-    for (let i = 0; i < reveals.length; i++) {
-      let windowHeight = window.innerHeight;
-      let revealTop = reveals[i].getBoundingClientRect().top;
-      let revealPoint = 100;
-      if (revealTop < windowHeight - revealPoint) {
-        reveals[i].classList.add("active");
-      }
-    }
-  }
-  window.addEventListener("scroll", revealElements);
-  window.addEventListener("load", revealElements);
-  revealElements();
-</script>
-</body>
-        </html>
+    <
