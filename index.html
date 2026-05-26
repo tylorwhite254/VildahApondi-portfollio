@@ -80,20 +80,10 @@ a {
 
 .btn {
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
 .btn:hover {
   animation: pulse-glow 1.5s infinite;
-}
-
-.skill-card, .about-card, .service-box, .tool-box, .review-card, .work-card, .certificate-card {
-  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-}
-
-.skill-card:hover, .about-card:hover, .service-box:hover, .review-card:hover, .work-card:hover, .certificate-card:hover {
-  transform: translateY(-12px) scale(1.02);
 }
 
 /* HEADER */
@@ -110,7 +100,6 @@ header {
   align-items: center;
   z-index: 1000;
   border-bottom: 2px solid rgba(212, 175, 55, 0.3);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
 .logo {
@@ -118,11 +107,6 @@ header {
   color: var(--gold);
   font-weight: 800;
   font-family: 'Playfair Display', serif;
-  letter-spacing: 1px;
-}
-
-.logo:hover {
-  text-shadow: 0 0 15px rgba(212,175,55,0.6);
 }
 
 nav {
@@ -135,7 +119,6 @@ nav a {
   color: #faf0dd;
   font-weight: 500;
   transition: 0.3s;
-  font-size: 0.95rem;
   position: relative;
 }
 
@@ -156,7 +139,6 @@ nav a:hover::after {
 
 nav a:hover {
   color: var(--gold);
-  transform: translateY(-2px);
 }
 
 /* HERO */
@@ -182,11 +164,8 @@ nav a:hover {
   color: var(--gold-light);
   border-radius: 50px;
   margin-bottom: 25px;
-  letter-spacing: 2.5px;
   font-size: 13px;
-  font-weight: 500;
   background: rgba(212,175,55,0.1);
-  animation: pulse-glow 2s infinite;
 }
 
 .hero-text h1 {
@@ -199,14 +178,12 @@ nav a:hover {
 
 .hero-text h1 span {
   color: var(--gold);
-  text-shadow: 0 0 10px rgba(212,175,55,0.4);
 }
 
 .hero-text h2 {
   font-size: 34px;
   color: #f5e2a4;
   margin-bottom: 20px;
-  font-weight: 600;
 }
 
 .hero-text p {
@@ -214,7 +191,6 @@ nav a:hover {
   line-height: 1.9;
   margin-bottom: 35px;
   max-width: 650px;
-  font-size: 1.05rem;
 }
 
 .btn {
@@ -226,13 +202,11 @@ nav a:hover {
   font-weight: 800;
   transition: all 0.3s ease;
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-  letter-spacing: 0.5px;
 }
 
 .btn:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 35px rgba(212, 175, 55, 0.45);
-  background: linear-gradient(125deg, #e5c158, #c98f47);
 }
 
 .hero-img {
@@ -248,12 +222,6 @@ nav a:hover {
   border-radius: 50%;
   border: 6px solid var(--gold);
   box-shadow: 0 0 55px rgba(212, 175, 55, 0.5);
-  transition: 0.4s;
-}
-
-.hero-img img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 70px rgba(212, 175, 55, 0.7);
 }
 
 /* SOCIAL ICONS */
@@ -274,15 +242,13 @@ nav a:hover {
   color: #fff5e6;
   font-size: 32px;
   transition: 0.3s;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
   border: 1px solid rgba(212,175,55,0.3);
 }
 
 .social-icons a:hover {
   background: var(--gold);
   color: #1f140f;
-  transform: translateY(-7px) scale(1.05);
-  border-color: white;
+  transform: translateY(-7px);
 }
 
 /* SECTION TITLES */
@@ -293,7 +259,6 @@ nav a:hover {
   margin-bottom: 70px;
   font-family: 'Playfair Display', serif;
   font-weight: 800;
-  letter-spacing: -0.5px;
   position: relative;
 }
 
@@ -305,11 +270,6 @@ nav a:hover {
   background: var(--gold);
   margin: 18px auto 0;
   border-radius: 4px;
-  transition: width 0.5s ease;
-}
-
-.section-title:hover:after {
-  width: 150px;
 }
 
 /* ABOUT */
@@ -325,7 +285,6 @@ nav a:hover {
   border-radius: 40px;
   border: 1px solid rgba(212, 175, 55, 0.25);
   transition: 0.3s;
-  box-shadow: var(--shadow-gold);
 }
 
 .about-card:hover {
@@ -337,13 +296,11 @@ nav a:hover {
   color: var(--gold);
   font-size: 32px;
   margin-bottom: 20px;
-  font-weight: 700;
 }
 
 .about-card p {
   line-height: 1.9;
   color: #fcf3e2;
-  font-size: 1rem;
 }
 
 /* SKILLS */
@@ -363,14 +320,12 @@ nav a:hover {
 
 .skill-card:hover {
   transform: translateY(-8px);
-  border-color: var(--gold);
 }
 
 .skill-card h3 {
   color: var(--gold);
   margin-bottom: 25px;
   font-size: 30px;
-  font-weight: 700;
 }
 
 .skill-card ul {
@@ -381,17 +336,10 @@ nav a:hover {
   margin-bottom: 18px;
   color: #f5ecdc;
   line-height: 1.8;
-  font-size: 1.02rem;
   list-style-type: square;
-  transition: transform 0.2s;
 }
 
-.skill-card li:hover {
-  transform: translateX(8px);
-  color: var(--gold-light);
-}
-
-/* CERTIFICATES */
+/* CERTIFICATES - EXACTLY AS IN FIRST CODE */
 .certificate-container {
   display: flex;
   flex-direction: column;
@@ -407,13 +355,11 @@ nav a:hover {
   max-width: 1000px;
   width: 100%;
   transition: 0.3s;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
 }
 
 .certificate-card:hover {
   transform: translateY(-8px);
   border-color: var(--gold);
-  box-shadow: 0 25px 40px rgba(212,175,55,0.2);
 }
 
 .certificate-image {
@@ -421,11 +367,6 @@ nav a:hover {
   display: block;
   max-height: 380px;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.certificate-card:hover .certificate-image {
-  transform: scale(1.02);
 }
 
 .certificate-content {
@@ -457,7 +398,6 @@ nav a:hover {
 
 .service-box:hover {
   transform: translateY(-8px);
-  border-color: var(--gold);
 }
 
 .service-box i {
@@ -465,22 +405,12 @@ nav a:hover {
   color: var(--gold);
   margin-bottom: 25px;
   display: inline-block;
-  transition: transform 0.3s;
-}
-
-.service-box:hover i {
-  transform: scale(1.1) rotate(5deg);
 }
 
 .service-box h3 {
   color: var(--gold);
   margin-bottom: 18px;
   font-size: 30px;
-}
-
-.service-box p {
-  color: #eadfce;
-  line-height: 1.8;
 }
 
 /* TOOLS SECTION */
@@ -496,24 +426,22 @@ nav a:hover {
   border-radius: 38px;
   border: 1px solid rgba(212, 175, 55, 0.25);
   text-align: center;
-  transition: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  transition: all 0.35s;
   cursor: pointer;
   display: block;
   text-decoration: none;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .tool-box:hover {
   transform: translateY(-12px);
   background: #35261e;
   border-color: var(--gold);
-  box-shadow: 0 28px 38px -12px rgba(212, 175, 55, 0.45);
 }
 
 .tool-icon-fa {
   font-size: 85px;
   margin-bottom: 22px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -525,17 +453,15 @@ nav a:hover {
 
 .tool-box:hover .tool-icon-fa {
   transform: scale(1.1);
-  background: rgba(212,175,55,0.3);
 }
 
 .tool-icon-chatgpt-img {
   width: 85px;
   height: 85px;
   margin-bottom: 22px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
   display: inline-block;
   object-fit: contain;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 .tool-box:hover .tool-icon-chatgpt-img {
@@ -555,24 +481,20 @@ nav a:hover {
   font-size: 26px;
   font-weight: 700;
   margin-top: 12px;
-  margin-bottom: 10px;
 }
 
 .tool-hint {
   display: inline-block;
   font-size: 12px;
   color: rgba(255, 245, 220, 0.55);
-  transition: 0.25s;
-  letter-spacing: 0.6px;
   background: rgba(0,0,0,0.3);
   padding: 4px 12px;
   border-radius: 30px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .tool-box:hover .tool-hint {
   color: var(--gold-light);
-  background: rgba(212,175,55,0.15);
 }
 
 /* WORK */
@@ -592,18 +514,12 @@ nav a:hover {
 
 .work-card:hover {
   transform: translateY(-12px);
-  border-color: var(--gold);
 }
 
 .work-image {
   width: 100%;
   height: 260px;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.work-card:hover .work-image {
-  transform: scale(1.05);
 }
 
 .work-content {
@@ -614,11 +530,6 @@ nav a:hover {
   color: var(--gold);
   margin-bottom: 16px;
   font-size: 30px;
-}
-
-.work-content p {
-  color: #eadfce;
-  line-height: 1.8;
 }
 
 /* REVIEWS */
@@ -639,7 +550,6 @@ nav a:hover {
 
 .review-card:hover {
   transform: translateY(-8px);
-  border-color: var(--gold);
 }
 
 .reviewer-image {
@@ -649,28 +559,18 @@ nav a:hover {
   object-fit: cover;
   margin: 0 auto 20px;
   border: 3px solid var(--gold);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.review-card:hover .reviewer-image {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(212,175,55,0.4);
 }
 
 .review-card p {
   line-height: 1.8;
   color: #fcf2e0;
   margin-bottom: 20px;
-  font-size: 1.02rem;
   font-style: italic;
 }
 
 .review-card h4 {
   color: var(--gold);
   font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 10px;
 }
 
 .review-title {
@@ -688,13 +588,6 @@ nav a:hover {
   border-radius: 55px;
   border: 1px solid rgba(212, 175, 55, 0.3);
   text-align: center;
-  transition: all 0.3s;
-}
-
-.contact-box:hover {
-  transform: translateY(-5px);
-  border-color: var(--gold);
-  box-shadow: 0 20px 40px rgba(212,175,55,0.15);
 }
 
 .contact-item {
@@ -704,18 +597,12 @@ nav a:hover {
   gap: 20px;
   margin-bottom: 28px;
   font-size: 22px;
-  font-weight: 500;
 }
 
 .contact-item i {
   color: var(--gold);
   font-size: 44px;
   width: 55px;
-  transition: transform 0.3s;
-}
-
-.contact-item:hover i {
-  transform: scale(1.1);
 }
 
 /* FOOTER */
@@ -724,8 +611,6 @@ footer {
   padding: 32px 20px;
   background: #0b0806;
   color: #cfcfcf;
-  font-size: 14px;
-  letter-spacing: 0.5px;
   border-top: 1px solid rgba(212,175,55,0.2);
 }
 
@@ -756,20 +641,11 @@ footer {
   .section-title {
     font-size: 46px;
   }
-  .social-icons a {
-    width: 58px;
-    height: 58px;
-    font-size: 28px;
-  }
   .tool-icon-fa {
     font-size: 65px;
     width: 80px;
     height: 80px;
     line-height: 80px;
-  }
-  .tool-icon-chatgpt-img {
-    width: 65px;
-    height: 65px;
   }
 }
 
@@ -784,17 +660,11 @@ footer {
   .hero-text h1 {
     font-size: 48px;
   }
-  .hero-text h2 {
-    font-size: 28px;
-  }
   .social-icons {
     justify-content: center;
   }
   .section-title {
     font-size: 40px;
-  }
-  .contact-box {
-    padding: 38px 24px;
   }
 }
 </style>
@@ -816,7 +686,7 @@ footer {
   </nav>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-text">
     <div class="hero-tag">EXECUTIVE VIRTUAL ASSISTANT</div>
@@ -836,7 +706,7 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section id="about">
   <h2 class="section-title reveal">About Me</h2>
   <div class="about-grid">
@@ -847,7 +717,7 @@ footer {
   </div>
 </section>
 
-<!-- PROFESSIONAL SKILLS -->
+<!-- SKILLS -->
 <section id="skills">
   <h2 class="section-title reveal">Professional Skills</h2>
   <div class="professional-grid">
@@ -876,22 +746,22 @@ footer {
   </div>
 </section>
 
-<!-- CERTIFICATES -->
+<!-- CERTIFICATES - EXACTLY AS FIRST CODE (FULL CERTIFICATE CARDS) -->
 <section id="certificates">
-  <h2 class="section-title reveal">Certifications</h2>
+  <h2 class="section-title reveal">Certificates</h2>
   <div class="certificate-container">
     <div class="certificate-card reveal">
-      <img src="https://i.imgur.com/vw7ZGh0.jpeg" class="certificate-image" alt="Virtual Assistant Certificate">
+      <img src="https://i.imgur.com/vw7ZGh0.jpeg" class="certificate-image">
       <div class="certificate-content">
-        <h3>🎓 Virtual Assistant Certificate</h3>
-        <p>Issued by Novapex Training Centre — Advanced Executive Support</p>
+        <h3>Virtual Assistant Certificate</h3>
+        <p>Issued by Novapex Training Centre</p>
       </div>
     </div>
     <div class="certificate-card reveal">
-      <img src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg" class="certificate-image" alt="Golden Bridge Certificate">
+      <img src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg" class="certificate-image">
       <div class="certificate-content">
-        <h3>📘 Certificate of Training</h3>
-        <p>Golden Bridge Computer College — ICT & Business Systems</p>
+        <h3>Certificate of Training</h3>
+        <p>Issued at Golden Bridge Computer College</p>
       </div>
     </div>
   </div>
@@ -899,27 +769,27 @@ footer {
 
 <!-- SERVICES -->
 <section id="services">
-  <h2 class="section-title reveal">Premium Services</h2>
+  <h2 class="section-title reveal">Services</h2>
   <div class="services-grid">
     <div class="service-box reveal">
       <i class="fas fa-envelope-open-text"></i>
       <h3>Email Management</h3>
-      <p>Inbox zero, priority sorting, professional replies, and folder automation.</p>
+      <p>Inbox organization, prioritization, and professional communication handling.</p>
     </div>
     <div class="service-box reveal">
       <i class="fas fa-calendar-check"></i>
       <h3>Calendar Coordination</h3>
-      <p>Strategic scheduling, meeting prep, reminders, and time-block optimization.</p>
+      <p>Meeting scheduling, appointment management, and workflow organization.</p>
     </div>
     <div class="service-box reveal">
       <i class="fas fa-headset"></i>
       <h3>Customer Support</h3>
-      <p>Omnichannel support, ticket resolution, and client relationship nurturing.</p>
+      <p>Professional client communication and support services.</p>
     </div>
   </div>
 </section>
 
-<!-- TOOLS SECTION -->
+<!-- TOOLS -->
 <section id="tools">
   <h2 class="section-title reveal">Tools I Master</h2>
   <div class="tools-grid">
@@ -968,27 +838,27 @@ footer {
 
 <!-- MY WORK -->
 <section id="work">
-  <h2 class="section-title reveal">My Work Portfolio</h2>
+  <h2 class="section-title reveal">My Work</h2>
   <div class="work-grid">
     <div class="work-card reveal">
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Email Management">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop" class="work-image">
       <div class="work-content">
-        <h3>📧 Email Management</h3>
-        <p>Professional inbox filtering, label automation, and fast client response systems.</p>
+        <h3>Email Management</h3>
+        <p>Professional inbox organization, email prioritization, and communication management.</p>
       </div>
     </div>
     <div class="work-card reveal">
-      <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Calendar Coordination">
+      <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1200&auto=format&fit=crop" class="work-image">
       <div class="work-content">
-        <h3>📅 Calendar Coordination</h3>
-        <p>Strategic appointment booking, time audit, and smart scheduling for executives.</p>
+        <h3>Calendar Coordination</h3>
+        <p>Meeting scheduling, appointment organization, and workflow planning.</p>
       </div>
     </div>
     <div class="work-card reveal">
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Customer Support">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="work-image">
       <div class="work-content">
-        <h3>💬 Customer Support</h3>
-        <p>Compassionate & efficient support via chat/email, boosting retention rates.</p>
+        <h3>Customer Support</h3>
+        <p>Professional customer communication and business support services.</p>
       </div>
     </div>
   </div>
@@ -1000,19 +870,19 @@ footer {
   <div class="reviews-grid">
     <div class="review-card reveal">
       <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael" class="reviewer-image">
-      <p>“Vildah is a game-changer. Her email management saved me 15+ hours per week. Highly organized and proactive!”</p>
+      <p>“Vildah is professional, organized, and very reliable with communication and scheduling.”</p>
       <h4>Michael R.</h4>
       <div class="review-title">CEO, TechStart</div>
     </div>
     <div class="review-card reveal">
       <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amanda" class="reviewer-image">
-      <p>“Excellent virtual assistant with amazing time management skills. She runs my calendar flawlessly.”</p>
+      <p>“Excellent virtual assistant with amazing time management skills.”</p>
       <h4>Amanda L.</h4>
       <div class="review-title">Marketing Director</div>
     </div>
     <div class="review-card reveal">
       <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sophie" class="reviewer-image">
-      <p>“Creative, efficient, and highly professional in every task. Vildah is my go-to partner for all admin needs.”</p>
+      <p>“Creative, efficient, and highly professional in every task.”</p>
       <h4>Sophie N.</h4>
       <div class="review-title">Founder, Creative Agency</div>
     </div>
@@ -1032,12 +902,12 @@ footer {
       <p>+254 757 428 735</p>
     </div>
     <br>
-    <a href="mailto:vildahapondi38@gmail.com" class="btn">✉️ Hire Me Now</a>
+    <a href="mailto:vildahapondi38@gmail.com" class="btn">Hire Me</a>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio — Precision & Excellence</p>
+  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio</p>
 </footer>
 
 <script>
@@ -1057,4 +927,4 @@ footer {
   revealElements();
 </script>
 </body>
-  </html>
+      </html>
