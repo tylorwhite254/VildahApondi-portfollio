@@ -74,11 +74,6 @@ a {
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .hero-img img {
   animation: float 4s ease-in-out infinite;
 }
@@ -101,24 +96,6 @@ a {
   transform: translateY(-12px) scale(1.02);
 }
 
-/* Staggered animation for grid items */
-.tools-grid .tool-box:nth-child(1) { animation-delay: 0.1s; }
-.tools-grid .tool-box:nth-child(2) { animation-delay: 0.2s; }
-.tools-grid .tool-box:nth-child(3) { animation-delay: 0.3s; }
-.tools-grid .tool-box:nth-child(4) { animation-delay: 0.4s; }
-.tools-grid .tool-box:nth-child(5) { animation-delay: 0.5s; }
-.tools-grid .tool-box:nth-child(6) { animation-delay: 0.6s; }
-.tools-grid .tool-box:nth-child(7) { animation-delay: 0.7s; }
-.tools-grid .tool-box:nth-child(8) { animation-delay: 0.8s; }
-
-.services-grid .service-box:nth-child(1) { animation-delay: 0.1s; }
-.services-grid .service-box:nth-child(2) { animation-delay: 0.2s; }
-.services-grid .service-box:nth-child(3) { animation-delay: 0.3s; }
-
-.reviews-grid .review-card:nth-child(1) { animation-delay: 0.1s; }
-.reviews-grid .review-card:nth-child(2) { animation-delay: 0.2s; }
-.reviews-grid .review-card:nth-child(3) { animation-delay: 0.3s; }
-
 /* HEADER */
 header {
   position: fixed;
@@ -134,7 +111,6 @@ header {
   z-index: 1000;
   border-bottom: 2px solid rgba(212, 175, 55, 0.3);
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
 }
 
 .logo {
@@ -143,12 +119,10 @@ header {
   font-weight: 800;
   font-family: 'Playfair Display', serif;
   letter-spacing: 1px;
-  transition: all 0.3s;
 }
 
 .logo:hover {
   text-shadow: 0 0 15px rgba(212,175,55,0.6);
-  transform: scale(1.02);
 }
 
 nav {
@@ -417,7 +391,7 @@ nav a:hover {
   color: var(--gold-light);
 }
 
-/* CERTIFICATES - ORIGINAL STYLE */
+/* CERTIFICATES */
 .certificate-container {
   display: flex;
   flex-direction: column;
@@ -554,7 +528,6 @@ nav a:hover {
   background: rgba(212,175,55,0.3);
 }
 
-/* ChatGPT real image icon */
 .tool-icon-chatgpt-img {
   width: 85px;
   height: 85px;
@@ -903,7 +876,7 @@ footer {
   </div>
 </section>
 
-<!-- CERTIFICATES - ORIGINAL STYLE RESTORED -->
+<!-- CERTIFICATES -->
 <section id="certificates">
   <h2 class="section-title reveal">Certifications</h2>
   <div class="certificate-container">
@@ -946,7 +919,7 @@ footer {
   </div>
 </section>
 
-<!-- TOOLS SECTION - ChatGPT now uses REAL IMAGE -->
+<!-- TOOLS SECTION -->
 <section id="tools">
   <h2 class="section-title reveal">Tools I Master</h2>
   <div class="tools-grid">
@@ -985,7 +958,6 @@ footer {
       <h3>Slack</h3>
       <span class="tool-hint">click to explore</span>
     </a>
-    <!-- ChatGPT with REAL IMAGE LOGO -->
     <a href="https://chat.openai.com" target="_blank" class="tool-box reveal">
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="tool-icon-chatgpt-img">
       <h3>ChatGPT</h3>
@@ -1012,4 +984,77 @@ footer {
         <p>Strategic appointment booking, time audit, and smart scheduling for executives.</p>
       </div>
     </div>
-    <
+    <div class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Customer Support">
+      <div class="work-content">
+        <h3>💬 Customer Support</h3>
+        <p>Compassionate & efficient support via chat/email, boosting retention rates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <h2 class="section-title reveal">Client Reviews</h2>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael" class="reviewer-image">
+      <p>“Vildah is a game-changer. Her email management saved me 15+ hours per week. Highly organized and proactive!”</p>
+      <h4>Michael R.</h4>
+      <div class="review-title">CEO, TechStart</div>
+    </div>
+    <div class="review-card reveal">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amanda" class="reviewer-image">
+      <p>“Excellent virtual assistant with amazing time management skills. She runs my calendar flawlessly.”</p>
+      <h4>Amanda L.</h4>
+      <div class="review-title">Marketing Director</div>
+    </div>
+    <div class="review-card reveal">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sophie" class="reviewer-image">
+      <p>“Creative, efficient, and highly professional in every task. Vildah is my go-to partner for all admin needs.”</p>
+      <h4>Sophie N.</h4>
+      <div class="review-title">Founder, Creative Agency</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title reveal">Let's Work Together</h2>
+  <div class="contact-box reveal">
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <p>vildahapondi38@gmail.com</p>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-whatsapp"></i>
+      <p>+254 757 428 735</p>
+    </div>
+    <br>
+    <a href="mailto:vildahapondi38@gmail.com" class="btn">✉️ Hire Me Now</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio — Precision & Excellence</p>
+</footer>
+
+<script>
+  function revealElements() {
+    let reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let revealTop = reveals[i].getBoundingClientRect().top;
+      let revealPoint = 100;
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", revealElements);
+  window.addEventListener("load", revealElements);
+  revealElements();
+</script>
+</body>
+  </html>
