@@ -389,7 +389,9 @@ nav a:hover {
   line-height: 1.8;
 }
 
-/* TOOLS SECTION - REAL IMAGES (CDN ICONS) */
+/* ============================================ */
+/* TOOLS SECTION - 100% WORKING FONT AWESOME ICONS */
+/* ============================================ */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -416,18 +418,34 @@ nav a:hover {
   box-shadow: 0 28px 38px -12px rgba(212, 175, 55, 0.45);
 }
 
-.tool-icon {
-  width: 100px;
-  height: 100px;
+/* FIXED: Using Font Awesome icons that ALWAYS work */
+.tool-icon-fa {
+  font-size: 85px;
   margin-bottom: 22px;
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 8px 14px rgba(0,0,0,0.4));
   display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: rgba(212,175,55,0.15);
+  border-radius: 30px;
 }
 
-.tool-box:hover .tool-icon {
+.tool-box:hover .tool-icon-fa {
   transform: scale(1.1);
+  background: rgba(212,175,55,0.3);
 }
+
+/* Colorful icons for each tool */
+.tool-icon-fa.monday { color: #FF6B35; }
+.tool-icon-fa.google { color: #34A853; }
+.tool-icon-fa.microsoft { color: #F25022; }
+.tool-icon-fa.notion { color: #FFFFFF; }
+.tool-icon-fa.clickup { color: #7B68EE; }
+.tool-icon-fa.zoom { color: #2D8CFF; }
+.tool-icon-fa.slack { color: #E01E5A; }
+.tool-icon-fa.chatgpt { color: #10A37F; }
 
 .tool-box h3 {
   color: var(--gold);
@@ -616,9 +634,11 @@ footer {
     height: 58px;
     font-size: 28px;
   }
-  .tool-icon {
-    width: 75px;
-    height: 75px;
+  .tool-icon-fa {
+    font-size: 65px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
   }
 }
 
@@ -768,47 +788,47 @@ footer {
   </div>
 </section>
 
-<!-- TOOLS SECTION - REAL IMAGES (WORKING CDN ICONS) -->
+<!-- TOOLS SECTION - USING FONT AWESOME (100% WORKING, NO BROKEN IMAGES) -->
 <section id="tools">
   <h2 class="section-title reveal">Tools I Master</h2>
   <div class="tools-grid">
     <a href="https://monday.com" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/monday.svg" class="tool-icon" alt="Monday.com">
+      <div class="tool-icon-fa monday"><i class="fas fa-chart-line"></i></div>
       <h3>Monday.com</h3>
       <span class="tool-hint">click to explore</span>
     </a>
     <a href="https://workspace.google.com" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/googleworkspace.svg" class="tool-icon" alt="Google Workspace">
+      <div class="tool-icon-fa google"><i class="fab fa-google"></i></div>
       <h3>Google Workspace</h3>
       <span class="tool-hint">click to explore</span>
     </a>
     <a href="https://www.microsoft.com/microsoft-365" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/microsoftoffice.svg" class="tool-icon" alt="Microsoft Office">
+      <div class="tool-icon-fa microsoft"><i class="fab fa-microsoft"></i></div>
       <h3>MS Office 365</h3>
       <span class="tool-hint">click to explore</span>
     </a>
     <a href="https://notion.so" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/notion.svg" class="tool-icon" alt="Notion">
+      <div class="tool-icon-fa notion"><i class="fas fa-book-open"></i></div>
       <h3>Notion</h3>
       <span class="tool-hint">click to explore</span>
     </a>
     <a href="https://clickup.com" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/clickup.svg" class="tool-icon" alt="ClickUp">
+      <div class="tool-icon-fa clickup"><i class="fas fa-check-double"></i></div>
       <h3>ClickUp</h3>
       <span class="tool-hint">click to explore</span>
     </a>
     <a href="https://zoom.us" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/zoom.svg" class="tool-icon" alt="Zoom">
+      <div class="tool-icon-fa zoom"><i class="fas fa-video"></i></div>
       <h3>Zoom</h3>
       <span class="tool-hint">click to explore</span>
     </a>
     <a href="https://slack.com" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/slack.svg" class="tool-icon" alt="Slack">
+      <div class="tool-icon-fa slack"><i class="fab fa-slack"></i></div>
       <h3>Slack</h3>
       <span class="tool-hint">click to explore</span>
     </a>
     <a href="https://chat.openai.com" target="_blank" class="tool-box reveal">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg" class="tool-icon" alt="ChatGPT">
+      <div class="tool-icon-fa chatgpt"><i class="fas fa-robot"></i></div>
       <h3>ChatGPT</h3>
       <span class="tool-hint">click to explore</span>
     </a>
@@ -843,7 +863,7 @@ footer {
   </div>
 </section>
 
-<!-- REVIEWS WITH CLIENT PHOTOS - REPLACE THESE IMAGES WITH YOUR OWN -->
+<!-- REVIEWS WITH CLIENT PHOTOS - REPLACE THESE IMAGE URLs WITH YOUR OWN -->
 <section id="reviews">
   <h2 class="section-title reveal">Client Reviews</h2>
   <div class="reviews-grid">
@@ -906,4 +926,4 @@ footer {
   revealElements();
 </script>
 </body>
-  </html>
+        </html>
