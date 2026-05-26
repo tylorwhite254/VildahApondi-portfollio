@@ -48,14 +48,13 @@ img {
 }
 
 a {
-  text-decoration: none;  /* REMOVES ALL UNDERLINES */
+  text-decoration: none;
 }
 
-/* ========== ANIMATIONS ========== */
+/* ANIMATIONS */
 @keyframes float {
-  0% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
 }
 
 @keyframes pulse-glow {
@@ -72,7 +71,7 @@ a {
   animation: pulse-glow 1.5s infinite;
 }
 
-/* HEADER - NO UNDERLINE ON NAV LINKS */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -105,7 +104,7 @@ nav a {
   color: #faf0dd;
   font-weight: 500;
   transition: 0.3s;
-  text-decoration: none;  /* NO UNDERLINE */
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -223,7 +222,7 @@ nav a:hover {
   transform: translateY(-7px);
 }
 
-/* SECTION TITLES */
+/* SECTION TITLES - NO LINE UNDERNEATH */
 .section-title {
   text-align: center;
   font-size: 58px;
@@ -234,14 +233,9 @@ nav a:hover {
   position: relative;
 }
 
+/* REMOVED the underline/line completely */
 .section-title:after {
-  content: '';
-  display: block;
-  width: 90px;
-  height: 4px;
-  background: var(--gold);
-  margin: 18px auto 0;
-  border-radius: 4px;
+  display: none;
 }
 
 /* ABOUT */
@@ -902,4 +896,4 @@ footer {
   revealElements();
 </script>
 </body>
-        </html>
+      </html>
