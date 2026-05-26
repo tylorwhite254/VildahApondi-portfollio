@@ -28,7 +28,6 @@
   --card: #241813ec;
   --card-solid: #2a1d17;
   --text: #fcf5e8;
-  --shadow-gold: 0 20px 35px -12px rgba(212,175,55,0.25);
 }
 
 body {
@@ -51,11 +50,10 @@ a {
   text-decoration: none;
 }
 
-/* ========== ANIMATIONS ========== */
+/* ANIMATIONS */
 @keyframes float {
-  0% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
 }
 
 @keyframes pulse-glow {
@@ -64,22 +62,8 @@ a {
   100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-60px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(60px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
 .hero-img img {
   animation: float 4s ease-in-out infinite;
-}
-
-.btn {
-  transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -154,7 +138,6 @@ nav a:hover {
 .hero-text {
   flex: 1;
   min-width: 300px;
-  animation: slideInLeft 1s ease-out;
 }
 
 .hero-tag {
@@ -212,7 +195,6 @@ nav a:hover {
 .hero-img {
   flex: 1;
   text-align: center;
-  animation: slideInRight 1s ease-out;
 }
 
 .hero-img img {
@@ -339,45 +321,42 @@ nav a:hover {
   list-style-type: square;
 }
 
-/* CERTIFICATES - EXACTLY AS IN FIRST CODE */
+/* CERTIFICATES - EXACTLY AS FIRST CODE */
 .certificate-container {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 40px;
   align-items: center;
 }
 
 .certificate-card {
   background: var(--card-solid);
-  border-radius: 40px;
+  border-radius: 30px;
   overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   max-width: 1000px;
   width: 100%;
   transition: 0.3s;
 }
 
 .certificate-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold);
+  transform: translateY(-6px);
 }
 
 .certificate-image {
   width: 100%;
   display: block;
-  max-height: 380px;
-  object-fit: cover;
 }
 
 .certificate-content {
-  padding: 34px;
+  padding: 30px;
   text-align: center;
 }
 
 .certificate-content h3 {
   color: var(--gold);
-  font-size: 32px;
-  margin-bottom: 12px;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 /* SERVICES */
@@ -413,7 +392,12 @@ nav a:hover {
   font-size: 30px;
 }
 
-/* TOOLS SECTION */
+.service-box p {
+  color: #eadfce;
+  line-height: 1.8;
+}
+
+/* TOOLS */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -493,10 +477,6 @@ nav a:hover {
   margin-top: 8px;
 }
 
-.tool-box:hover .tool-hint {
-  color: var(--gold-light);
-}
-
 /* WORK */
 .work-grid {
   display: grid;
@@ -530,6 +510,11 @@ nav a:hover {
   color: var(--gold);
   margin-bottom: 16px;
   font-size: 30px;
+}
+
+.work-content p {
+  color: #eadfce;
+  line-height: 1.8;
 }
 
 /* REVIEWS */
@@ -672,7 +657,7 @@ footer {
 <body>
 
 <header>
-  <div class="logo">Vildah Apondi</div>
+  <div class="logo">Vildah Portfolio</div>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -711,8 +696,8 @@ footer {
   <h2 class="section-title reveal">About Me</h2>
   <div class="about-grid">
     <div class="about-card reveal">
-      <h3>✨ Tech-Forward Executive Partner</h3>
-      <p>Hey there, I'm Vildah — I don't just manage calendars and clear out inboxes; I build the systems that keep busy leaders sane. With a strong foundation in ICT and Data Science, I bridge the gap between high-level administrative support and technical efficiency. If your daily operations feel chaotic, I'm the person who steps in to streamline your workflows, untangle scheduling overlaps, and make your digital tools actually work for you.<br><br>I am looking for a single, long-term partnership where I can quietly handle the moving parts behind the scenes. By taking ownership of your day-to-day logistics, data, and digital workspace, I give you back the one thing you need most: the uninterrupted time to focus on scaling your vision.</p>
+      <h3>Professional Background</h3>
+      <p>Hey there, I'm Vildah — Your Tech-Forward Executive Partner. I don't just manage calendars and clear out inboxes; I build the systems that keep busy leaders sane. With a strong foundation in ICT and Data Science, I bridge the gap between high-level administrative support and technical efficiency. If your daily operations feel chaotic, I'm the person who steps in to streamline your workflows, untangle scheduling overlaps, and make your digital tools actually work for you.<br><br>I am looking for a single, long-term partnership where I can quietly handle the moving parts behind the scenes. By taking ownership of your day-to-day logistics, data, and digital workspace, I give you back the one thing you need most: the uninterrupted time to focus on scaling your vision.</p>
     </div>
   </div>
 </section>
@@ -722,31 +707,31 @@ footer {
   <h2 class="section-title reveal">Professional Skills</h2>
   <div class="professional-grid">
     <div class="skill-card reveal">
-      <h3>📋 Administrative Skills</h3>
+      <h3>Administrative Skills</h3>
       <ul>
-        <li>Email Management & Filtering</li>
-        <li>Calendar Coordination & Scheduling</li>
-        <li>Travel & Logistics Planning</li>
-        <li>Data Entry & CRM Updates</li>
-        <li>Document Organization & Filing</li>
-        <li>Customer Support (Email & Chat)</li>
+        <li>Email Management</li>
+        <li>Calendar Coordination</li>
+        <li>Travel Scheduling</li>
+        <li>Data Entry</li>
+        <li>Document Organization</li>
+        <li>Customer Support</li>
       </ul>
     </div>
     <div class="skill-card reveal">
-      <h3>🧠 Soft Skills</h3>
+      <h3>Soft Skills</h3>
       <ul>
-        <li>Exceptional Communication</li>
-        <li>Time Management & Prioritization</li>
-        <li>Proactive Problem Solving</li>
-        <li>Leadership & Ownership</li>
-        <li>Creativity in Workflows</li>
-        <li>Adaptability & Fast Learning</li>
+        <li>Communication</li>
+        <li>Time Management</li>
+        <li>Problem Solving</li>
+        <li>Leadership</li>
+        <li>Creativity</li>
+        <li>Adaptability</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATES - EXACTLY AS FIRST CODE (FULL CERTIFICATE CARDS) -->
+<!-- CERTIFICATES - EXACTLY AS FIRST CODE (FULL CERTIFICATE VISIBLE) -->
 <section id="certificates">
   <h2 class="section-title reveal">Certificates</h2>
   <div class="certificate-container">
@@ -927,4 +912,4 @@ footer {
   revealElements();
 </script>
 </body>
-      </html>
+  </html>
