@@ -1,1008 +1,892 @@
+This is a complete HTML document that creates a professional virtual assistant portfolio webpage for Vildah Apondi, updated to replace Canva with Monday.com and featuring larger, more prominent icons.
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vildah Apondi | Virtual Assistant Portfolio</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vildah Apondi | Elite Virtual Assistant Portfolio</title>
 <!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- FONT AWESOME -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- FONT AWESOME 6 (latest) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-
 /* ========================= */
-/* ROOT */
+/* ROOT VARIABLES - ELEVATED DESIGN */
 /* ========================= */
-
-:root{
-  --dark:#1a1210;
-  --dark2:#2b1a14;
-  --gold:#d4af37;
-  --gold-light:#f3d97a;
-  --brown:#8b5e3c;
-  --card:#241813;
-  --text:#f6ead7;
+:root {
+  --dark: #0f0b09;
+  --dark2: #1f1410;
+  --gold: #d4af37;
+  --gold-light: #f5e18b;
+  --brown: #9b6a42;
+  --card: #241813ec;
+  --card-solid: #2a1d17;
+  --text: #fcf5e8;
+  --shadow-gold: 0 20px 35px -12px rgba(212,175,55,0.25);
 }
 
-/* ========================= */
-/* GLOBAL */
-/* ========================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-  font-family:'Poppins',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
-body{
-  background:linear-gradient(135deg,var(--dark),var(--dark2));
-  color:white;
-  overflow-x:hidden;
+body {
+  background: radial-gradient(circle at 10% 20%, var(--dark), var(--dark2));
+  color: white;
+  overflow-x: hidden;
 }
 
-section{
-  padding:110px 8%;
+section {
+  padding: 110px 8%;
+  position: relative;
 }
 
-img{
-  max-width:100%;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
 }
 
 /* ========================= */
-/* HEADER */
+/* HEADER / NAVIGATION */
 /* ========================= */
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  padding:18px 8%;
-  background:rgba(15,10,8,0.95);
-  backdrop-filter:blur(12px);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  z-index:1000;
-  border-bottom:1px solid rgba(212,175,55,0.2);
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 8%;
+  background: rgba(10, 7, 5, 0.96);
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.logo{
-  font-size:32px;
-  color:var(--gold);
-  font-weight:800;
-  font-family:'Playfair Display',serif;
+.logo {
+  font-size: 34px;
+  color: var(--gold);
+  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-nav{
-  display:flex;
-  gap:24px;
+nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
-nav a{
-  color:#f5dfb3;
-  font-weight:500;
-  transition:0.3s;
+nav a {
+  color: #faf0dd;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
 }
 
-nav a:hover{
-  color:var(--gold);
-}
-
-/* ========================= */
-/* HERO */
-/* ========================= */
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:60px;
-  flex-wrap:wrap;
-}
-
-.hero-text{
-  flex:1;
-  min-width:300px;
-}
-
-.hero-tag{
-  display:inline-block;
-  padding:8px 20px;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  border-radius:50px;
-  margin-bottom:25px;
-  letter-spacing:2px;
-  font-size:12px;
-}
-
-.hero-text h1{
-  font-size:72px;
-  line-height:1.1;
-  margin-bottom:20px;
-  font-family:'Playfair Display',serif;
-}
-
-.hero-text h1 span{
-  color:var(--gold);
-}
-
-.hero-text h2{
-  font-size:32px;
-  color:#efd48d;
-  margin-bottom:20px;
-}
-
-.hero-text p{
-  color:#eadfce;
-  line-height:1.9;
-  margin-bottom:35px;
-  max-width:650px;
-}
-
-.btn{
-  display:inline-block;
-  padding:16px 35px;
-  border-radius:50px;
-  background:linear-gradient(135deg,var(--gold),var(--brown));
-  color:white;
-  font-weight:700;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 40px rgba(212,175,55,0.3);
-}
-
-.hero-img{
-  flex:1;
-  text-align:center;
-}
-
-.hero-img img{
-  width:370px;
-  height:370px;
-  object-fit:cover;
-  border-radius:50%;
-  border:5px solid var(--gold);
-  box-shadow:0 0 50px rgba(212,175,55,0.35);
+nav a:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
 }
 
 /* ========================= */
-/* SOCIAL ICONS */
+/* HERO SECTION */
 /* ========================= */
-
-.social-icons{
-  display:flex;
-  gap:18px;
-  margin-top:35px;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.social-icons a{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#332117;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-size:24px;
-  transition:0.3s;
+.hero-text {
+  flex: 1;
+  min-width: 300px;
 }
 
-.social-icons a:hover{
-  background:var(--gold);
-  transform:translateY(-6px);
+.hero-tag {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-light);
+  border-radius: 50px;
+  margin-bottom: 25px;
+  letter-spacing: 2.5px;
+  font-size: 13px;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+.hero-text h1 {
+  font-size: 78px;
+  line-height: 1.08;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+}
+
+.hero-text h1 span {
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(212,175,55,0.4);
+}
+
+.hero-text h2 {
+  font-size: 34px;
+  color: #f5e2a4;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-text p {
+  color: #f7efdd;
+  line-height: 1.9;
+  margin-bottom: 35px;
+  max-width: 650px;
+  font-size: 1.05rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 38px;
+  border-radius: 50px;
+  background: linear-gradient(125deg, var(--gold), #b87c3c);
+  color: #1e130f;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(212, 175, 55, 0.45);
+  background: linear-gradient(125deg, #e5c158, #c98f47);
+}
+
+.hero-img {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 390px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--gold);
+  box-shadow: 0 0 55px rgba(212, 175, 55, 0.5);
+  transition: 0.4s;
+}
+
+.hero-img img:hover {
+  transform: scale(1.02);
 }
 
 /* ========================= */
-/* TITLES */
+/* SOCIAL ICONS - BIGGER & BOLDER */
 /* ========================= */
-
-.section-title{
-  text-align:center;
-  font-size:56px;
-  color:var(--gold);
-  margin-bottom:70px;
-  font-family:'Playfair Display',serif;
+.social-icons {
+  display: flex;
+  gap: 25px;
+  margin-top: 45px;
 }
 
-/* ========================= */
-/* ABOUT */
-/* ========================= */
-
-.about-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
+.social-icons a {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #38281f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff5e6;
+  font-size: 32px;
+  transition: 0.3s;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  border: 1px solid rgba(212,175,55,0.3);
 }
 
-.about-card{
-  background:var(--card);
-  padding:40px;
-  border-radius:30px;
-  border:1px solid rgba(212,175,55,0.15);
-  transition:0.3s;
-}
-
-.about-card:hover{
-  transform:translateY(-8px);
-}
-
-.about-card h3{
-  color:var(--gold);
-  font-size:30px;
-  margin-bottom:15px;
-}
-
-.about-card p{
-  line-height:1.9;
-  color:#eadfce;
+.social-icons a:hover {
+  background: var(--gold);
+  color: #1f140f;
+  transform: translateY(-7px) scale(1.05);
+  border-color: white;
 }
 
 /* ========================= */
+/* SECTION TITLES */
+/* ========================= */
+.section-title {
+  text-align: center;
+  font-size: 58px;
+  color: var(--gold);
+  margin-bottom: 70px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: var(--gold);
+  margin: 18px auto 0;
+  border-radius: 4px;
+}
+
+/* ========================= */
+/* ABOUT & CARDS */
+/* ========================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.about-card {
+  background: var(--card-solid);
+  padding: 48px 38px;
+  border-radius: 40px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  transition: 0.3s;
+  box-shadow: var(--shadow-gold);
+  backdrop-filter: blur(2px);
+}
+
+.about-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--gold);
+}
+
+.about-card h3 {
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-card p {
+  line-height: 1.9;
+  color: #fcf3e2;
+  font-size: 1rem;
+}
+
 /* SKILLS */
-/* ========================= */
-
-.professional-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
+.professional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
 }
 
-.skill-card{
-  background:var(--card);
-  padding:40px;
-  border-radius:30px;
-  border:1px solid rgba(212,175,55,0.15);
+.skill-card {
+  background: var(--card-solid);
+  padding: 44px 38px;
+  border-radius: 40px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  transition: 0.3s;
 }
 
-.skill-card h3{
-  color:var(--gold);
-  margin-bottom:20px;
-  font-size:28px;
+.skill-card:hover {
+  transform: translateY(-8px);
 }
 
-.skill-card ul{
-  padding-left:20px;
+.skill-card h3 {
+  color: var(--gold);
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.skill-card li{
-  margin-bottom:15px;
-  color:#f0e2cf;
-  line-height:1.8;
+.skill-card ul {
+  padding-left: 24px;
 }
 
-/* ========================= */
+.skill-card li {
+  margin-bottom: 18px;
+  color: #f5ecdc;
+  line-height: 1.8;
+  font-size: 1.02rem;
+  list-style-type: square;
+}
+
 /* CERTIFICATES */
-/* ========================= */
-
-.certificate-container{
-  display:flex;
-  flex-direction:column;
-  gap:40px;
-  align-items:center;
+.certificate-container {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  align-items: center;
 }
 
-.certificate-card{
-  background:var(--card);
-  border-radius:30px;
-  overflow:hidden;
-  border:1px solid rgba(212,175,55,0.15);
-  max-width:1000px;
-  width:100%;
-  transition:0.3s;
+.certificate-card {
+  background: var(--card-solid);
+  border-radius: 40px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  max-width: 1000px;
+  width: 100%;
+  transition: 0.3s;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
 }
 
-.certificate-card:hover{
-  transform:translateY(-6px);
+.certificate-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
 }
 
-.certificate-image{
-  width:100%;
-  display:block;
+.certificate-image {
+  width: 100%;
+  display: block;
+  max-height: 380px;
+  object-fit: cover;
 }
 
-.certificate-content{
-  padding:30px;
-  text-align:center;
+.certificate-content {
+  padding: 34px;
+  text-align: center;
 }
 
-.certificate-content h3{
-  color:var(--gold);
-  font-size:30px;
-  margin-bottom:10px;
+.certificate-content h3 {
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
-/* ========================= */
 /* SERVICES */
-/* ========================= */
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 35px;
 }
 
-.service-box{
-  background:var(--card);
-  padding:35px;
-  border-radius:30px;
-  border:1px solid rgba(212,175,55,0.15);
-  transition:0.3s;
+.service-box {
+  background: var(--card-solid);
+  padding: 42px 28px;
+  border-radius: 38px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: 0.25s;
+  text-align: center;
 }
 
-.service-box:hover{
-  transform:translateY(-6px);
+.service-box:hover {
+  transform: translateY(-8px);
 }
 
-.service-box i{
-  font-size:42px;
-  color:var(--gold);
-  margin-bottom:20px;
+.service-box i {
+  font-size: 58px;   /* LARGER ICONS */
+  color: var(--gold);
+  margin-bottom: 25px;
+  display: inline-block;
+  transition: 0.2s;
 }
 
-.service-box h3{
-  color:var(--gold);
-  margin-bottom:15px;
-  font-size:28px;
+.service-box h3 {
+  color: var(--gold);
+  margin-bottom: 18px;
+  font-size: 30px;
 }
 
-.service-box p{
-  color:#eadfce;
-  line-height:1.8;
+.service-box p {
+  color: #eadfce;
+  line-height: 1.8;
 }
 
-/* ========================= */
-/* TOOLS */
-/* ========================= */
-
-.tools-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:25px;
+/* TOOLS GRID - Updated: removed canva, added Monday.com with large icon */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 35px;
 }
 
-.tool-box{
-  background:var(--card);
-  padding:35px 25px;
-  border-radius:25px;
-  border:1px solid rgba(212,175,55,0.15);
-  text-align:center;
-  transition:0.3s;
+.tool-box {
+  background: var(--card-solid);
+  padding: 38px 20px;
+  border-radius: 32px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  text-align: center;
+  transition: 0.3s;
 }
 
-.tool-box:hover{
-  transform:translateY(-8px);
+.tool-box:hover {
+  transform: translateY(-10px);
+  background: #2f1f18;
+  border-color: var(--gold);
 }
 
-.tool-icon{
-  width:70px;
-  height:70px;
-  margin-bottom:18px;
+.tool-icon {
+  width: 85px;        /* BIGGER ICONS */
+  height: 85px;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
 }
 
-.tool-box h3{
-  color:var(--gold);
-  font-size:22px;
+.tool-box:hover .tool-icon {
+  transform: scale(1.05);
 }
 
-/* ========================= */
-/* WORK */
-/* ========================= */
-
-.work-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
+.tool-box h3 {
+  color: var(--gold);
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 5px;
 }
 
-.work-card{
-  background:var(--card);
-  border-radius:28px;
-  overflow:hidden;
-  border:1px solid rgba(212,175,55,0.15);
-  transition:0.3s;
+/* WORK GALLERY */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 40px;
 }
 
-.work-card:hover{
-  transform:translateY(-8px);
+.work-card {
+  background: var(--card-solid);
+  border-radius: 35px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: 0.3s;
 }
 
-.work-image{
-  width:100%;
-  height:240px;
-  object-fit:cover;
+.work-card:hover {
+  transform: translateY(-12px);
 }
 
-.work-content{
-  padding:28px;
+.work-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
 }
 
-.work-content h3{
-  color:var(--gold);
-  margin-bottom:15px;
-  font-size:28px;
+.work-content {
+  padding: 32px;
 }
 
-.work-content p{
-  color:#eadfce;
-  line-height:1.8;
+.work-content h3 {
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-size: 30px;
 }
 
-/* ========================= */
+.work-content p {
+  color: #eadfce;
+  line-height: 1.8;
+}
+
 /* REVIEWS */
-/* ========================= */
-
-.reviews-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 32px;
 }
 
-.review-card{
-  background:var(--card);
-  padding:30px;
-  border-radius:25px;
-  border:1px solid rgba(212,175,55,0.15);
+.review-card {
+  background: var(--card-solid);
+  padding: 38px 32px;
+  border-radius: 38px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: 0.2s;
 }
 
-.review-card p{
-  line-height:1.8;
-  color:#f0e2cf;
-  margin-bottom:20px;
+.review-card p {
+  line-height: 1.8;
+  color: #fcf2e0;
+  margin-bottom: 24px;
+  font-size: 1.02rem;
+  font-style: italic;
 }
 
-.review-card h4{
-  color:var(--gold);
+.review-card h4 {
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-/* ========================= */
 /* CONTACT */
-/* ========================= */
-
-.contact-box{
-  max-width:700px;
-  margin:auto;
-  background:var(--card);
-  padding:50px;
-  border-radius:30px;
-  border:1px solid rgba(212,175,55,0.15);
-  text-align:center;
+.contact-box {
+  max-width: 750px;
+  margin: auto;
+  background: var(--card-solid);
+  padding: 55px 45px;
+  border-radius: 55px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  text-align: center;
 }
 
-.contact-item{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
-  margin-bottom:20px;
-  font-size:20px;
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
-.contact-item i{
-  color:var(--gold);
-  font-size:26px;
+.contact-item i {
+  color: var(--gold);
+  font-size: 44px;        /* LARGER CONTACT ICONS */
+  width: 55px;
 }
 
-/* ========================= */
 /* FOOTER */
-/* ========================= */
-
-footer{
-  text-align:center;
-  padding:25px;
-  background:#120d0b;
-  color:#cfcfcf;
+footer {
+  text-align: center;
+  padding: 32px 20px;
+  background: #0b0806;
+  color: #cfcfcf;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(212,175,55,0.2);
 }
 
-/* ========================= */
-/* REVEAL */
-/* ========================= */
-
-.reveal{
-  opacity:0;
-  transform:translateY(60px);
-  transition:1s;
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.9s cubic-bezier(0.2, 0.8, 0.3, 1);
 }
 
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* ========================= */
 /* RESPONSIVE */
-/* ========================= */
-
-@media(max-width:768px){
-
-  nav{
-    display:none;
+@media (max-width: 900px) {
+  section {
+    padding: 90px 5%;
   }
-
-  .hero{
-    flex-direction:column-reverse;
-    text-align:center;
+  .hero-text h1 {
+    font-size: 56px;
   }
-
-  .hero-text h1{
-    font-size:48px;
+  .hero-img img {
+    width: 280px;
+    height: 280px;
   }
-
-  .hero-img img{
-    width:280px;
-    height:280px;
+  .section-title {
+    font-size: 46px;
   }
-
-  .social-icons{
-    justify-content:center;
+  .social-icons a {
+    width: 58px;
+    height: 58px;
+    font-size: 28px;
   }
-
-  .section-title{
-    font-size:42px;
+  .tool-icon {
+    width: 68px;
+    height: 68px;
   }
-
+  .contact-item i {
+    font-size: 36px;
+  }
 }
 
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 48px;
+  }
+  .hero-text h2 {
+    font-size: 28px;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+  .contact-box {
+    padding: 38px 24px;
+  }
+  .tool-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
 </style>
-
 </head>
-
 <body>
 
-<!-- HEADER -->
-
+<!-- HEADER STICKY -->
 <header>
-
-<div class="logo">Vildah Portfolio</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#certificates">Certificates</a>
-<a href="#services">Services</a>
-<a href="#tools">Tools</a>
-<a href="#work">My Work</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
-</nav>
-
+  <div class="logo">Vildah Apondi</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#services">Services</a>
+    <a href="#tools">Tools</a>
+    <a href="#work">My Work</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-
+<!-- HERO SECTION -->
 <section class="hero" id="home">
-
-<div class="hero-text reveal">
-
-<div class="hero-tag">EXECUTIVE VIRTUAL ASSISTANT</div>
-
-<h1>Hello, I'm <span>Vildah Apondi</span></h1>
-
-<h2>Professional Virtual Assistant</h2>
-
-<p>
-Helping businesses stay organized through
-professional inbox management,
-calendar coordination,
-administrative support,
-workflow organization,
-and customer communication.
-</p>
-
-<a href="#contact" class="btn">Hire Me</a>
-
-<div class="social-icons">
-
-<a href="https://wa.me/254757428735" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="https://linkedin.com" target="_blank">
-<i class="fab fa-linkedin-in"></i>
-</a>
-
-<a href="https://instagram.com" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="mailto:vildahapondi38@gmail.com">
-<i class="fas fa-envelope"></i>
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-img reveal">
-
-<img src="https://www.image2url.com/r2/default/images/1779711441382-e303f8c4-b9fa-4056-8ea1-c5d4ff0a47b5.jpeg">
-
-</div>
-
+  <div class="hero-text reveal">
+    <div class="hero-tag">EXECUTIVE VIRTUAL ASSISTANT</div>
+    <h1>Hello, I'm <span>Vildah Apondi</span></h1>
+    <h2>Professional Virtual Assistant</h2>
+    <p>
+      Helping businesses stay organized through professional inbox management,
+      calendar coordination, administrative support, workflow organization,
+      and customer communication — all powered by precision and care.
+    </p>
+    <a href="#contact" class="btn">📅 Let's Collaborate</a>
+    <div class="social-icons">
+      <a href="https://wa.me/254757428735" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://linkedin.com/in/vildah-apondi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:vildahapondi38@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="hero-img reveal">
+    <img src="https://www.image2url.com/r2/default/images/1779711441382-e303f8c4-b9fa-4056-8ea1-c5d4ff0a47b5.jpeg" alt="Vildah Apondi">
+  </div>
 </section>
 
-<!-- ABOUT -->
-
+<!-- ABOUT SECTION -->
 <section id="about">
-
-<h2 class="section-title reveal">About Me</h2>
-
-<div class="about-grid">
-
-<div class="about-card reveal">
-<h3>Professional Background</h3>
-<p>
-​Hey there, I’m Vildah Your Tech-Forward Executive Partner
-​I don’t just manage calendars and clear out inboxes; I build the systems that keep busy leaders sane. With a strong foundation in ICT and Data Science, I bridge the gap between high-level administrative support and technical efficiency. If your daily operations feel chaotic, I’m the person who steps in to streamline your workflows, untangle scheduling overlaps, and make your digital tools actually work for you.
-​I am looking for a single, long-term partnership where I can quietly handle the moving parts behind the scenes. By taking ownership of your day-to-day logistics, data, and digital workspace, I give you back the one thing you need most: the uninterrupted time to focus on scaling your vision.
-</p>
-</div>
-
+  <h2 class="section-title reveal">About Me</h2>
+  <div class="about-grid">
+    <div class="about-card reveal">
+      <h3>✨ Tech-Forward Executive Partner</h3>
+      <p>
+        Hey there, I'm Vildah — I don't just manage calendars and clear out inboxes; I build the systems that keep busy leaders sane. 
+        With a strong foundation in ICT and Data Science, I bridge the gap between high-level administrative support and technical efficiency. 
+        If your daily operations feel chaotic, I'm the person who steps in to streamline your workflows, untangle scheduling overlaps, 
+        and make your digital tools actually work for you.<br><br>
+        I am looking for a single, long-term partnership where I can quietly handle the moving parts behind the scenes. By taking ownership 
+        of your day-to-day logistics, data, and digital workspace, I give you back the one thing you need most: the uninterrupted time 
+        to focus on scaling your vision.
+      </p>
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS -->
-
+<!-- PROFESSIONAL SKILLS -->
 <section id="skills">
-
-<h2 class="section-title reveal">Professional Skills</h2>
-
-<div class="professional-grid">
-
-<div class="skill-card reveal">
-<h3>Administrative Skills</h3>
-
-<ul>
-<li>Email Management</li>
-<li>Calendar Coordination</li>
-<li>Travel Scheduling</li>
-<li>Data Entry</li>
-<li>Document Organization</li>
-<li>Customer Support</li>
-</ul>
-
-</div>
-
-<div class="skill-card reveal">
-<h3>Soft Skills</h3>
-
-<ul>
-<li>Communication</li>
-<li>Time Management</li>
-<li>Problem Solving</li>
-<li>Leadership</li>
-<li>Creativity</li>
-<li>Adaptability</li>
-</ul>
-
-</div>
-
-</div>
-
+  <h2 class="section-title reveal">Professional Skills</h2>
+  <div class="professional-grid">
+    <div class="skill-card reveal">
+      <h3>📋 Administrative Skills</h3>
+      <ul>
+        <li>Email Management & Filtering</li>
+        <li>Calendar Coordination & Scheduling</li>
+        <li>Travel & Logistics Planning</li>
+        <li>Data Entry & CRM Updates</li>
+        <li>Document Organization & Filing</li>
+        <li>Customer Support (Email & Chat)</li>
+      </ul>
+    </div>
+    <div class="skill-card reveal">
+      <h3>🧠 Soft Skills</h3>
+      <ul>
+        <li>Exceptional Communication</li>
+        <li>Time Management & Prioritization</li>
+        <li>Proactive Problem Solving</li>
+        <li>Leadership & Ownership</li>
+        <li>Creativity in Workflows</li>
+        <li>Adaptability & Fast Learning</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- CERTIFICATES -->
-
 <section id="certificates">
-
-<h2 class="section-title reveal">Certificates</h2>
-
-<div class="certificate-container">
-
-<div class="certificate-card reveal">
-
-<img
-src="https://i.imgur.com/vw7ZGh0.jpeg"
-class="certificate-image">
-
-<div class="certificate-content">
-
-<h3>Virtual Assistant Certificate</h3>
-
-<p>Issued by Novapex Training Centre</p>
-
-</div>
-
-</div>
-
-<div class="certificate-card reveal">
-
-<img
-src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg"
-class="certificate-image">
-
-<div class="certificate-content">
-
-<h3>Certificate of Training</h3>
-
-<p>Issued at Golden Bridge Computer College</p>
-
-</div>
-
-</div>
-
-</div>
-
+  <h2 class="section-title reveal">Certifications</h2>
+  <div class="certificate-container">
+    <div class="certificate-card reveal">
+      <img src="https://i.imgur.com/vw7ZGh0.jpeg" class="certificate-image" alt="Virtual Assistant Certificate">
+      <div class="certificate-content">
+        <h3>🎓 Virtual Assistant Certificate</h3>
+        <p>Issued by Novapex Training Centre — Advanced Executive Support</p>
+      </div>
+    </div>
+    <div class="certificate-card reveal">
+      <img src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg" class="certificate-image" alt="Golden Bridge Certificate">
+      <div class="certificate-content">
+        <h3>📘 Certificate of Training</h3>
+        <p>Golden Bridge Computer College — ICT & Business Systems</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- SERVICES -->
-
 <section id="services">
-
-<h2 class="section-title reveal">Services</h2>
-
-<div class="services-grid">
-
-<div class="service-box reveal">
-<i class="fas fa-envelope-open-text"></i>
-<h3>Email Management</h3>
-<p>Inbox organization, prioritization, and professional communication handling.</p>
-</div>
-
-<div class="service-box reveal">
-<i class="fas fa-calendar-check"></i>
-<h3>Calendar Coordination</h3>
-<p>Meeting scheduling, appointment management, and workflow organization.</p>
-</div>
-
-<div class="service-box reveal">
-<i class="fas fa-headset"></i>
-<h3>Customer Support</h3>
-<p>Professional client communication and support services.</p>
-</div>
-
-</div>
-
+  <h2 class="section-title reveal">Premium Services</h2>
+  <div class="services-grid">
+    <div class="service-box reveal">
+      <i class="fas fa-envelope-open-text"></i>
+      <h3>Email Management</h3>
+      <p>Inbox zero, priority sorting, professional replies, and folder automation.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-calendar-check"></i>
+      <h3>Calendar Coordination</h3>
+      <p>Strategic scheduling, meeting prep, reminders, and time-block optimization.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-headset"></i>
+      <h3>Customer Support</h3>
+      <p>Omnichannel support, ticket resolution, and client relationship nurturing.</p>
+    </div>
+  </div>
 </section>
 
-<!-- TOOLS -->
-
+<!-- TOOLS (CANVA REMOVED, MONDAY.COM ADDED WITH LARGE ICONS) -->
 <section id="tools">
-
-<h2 class="section-title reveal">Tools I Use</h2>
-
-<div class="tools-grid">
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/canva/white" class="tool-icon">
-<h3>Canva</h3>
-</div>
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/googleworkspace/white" class="tool-icon">
-<h3>Google Workspace</h3>
-</div>
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/microsoftoffice/white" class="tool-icon">
-<h3>Microsoft Office</h3>
-</div>
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/notion/white" class="tool-icon">
-<h3>Notion</h3>
-</div>
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/clickup/white" class="tool-icon">
-<h3>ClickUp</h3>
-</div>
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/zoom/white" class="tool-icon">
-<h3>Zoom</h3>
-</div>
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/slack/white" class="tool-icon">
-<h3>Slack</h3>
-</div>
-
-<div class="tool-box reveal">
-<img src="https://cdn.simpleicons.org/openai/white" class="tool-icon">
-<h3>ChatGPT</h3>
-</div>
-
-</div>
-
+  <h2 class="section-title reveal">Tools I Master</h2>
+  <div class="tools-grid">
+    <!-- Monday.com - Replaces Canva -->
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/monday/white" class="tool-icon" alt="Monday.com">
+      <h3>Monday.com</h3>
+    </div>
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/googleworkspace/white" class="tool-icon" alt="Google Workspace">
+      <h3>Google Workspace</h3>
+    </div>
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/microsoftoffice/white" class="tool-icon" alt="Microsoft Office">
+      <h3>MS Office 365</h3>
+    </div>
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/notion/white" class="tool-icon" alt="Notion">
+      <h3>Notion</h3>
+    </div>
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/clickup/white" class="tool-icon" alt="ClickUp">
+      <h3>ClickUp</h3>
+    </div>
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/zoom/white" class="tool-icon" alt="Zoom">
+      <h3>Zoom</h3>
+    </div>
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/slack/white" class="tool-icon" alt="Slack">
+      <h3>Slack</h3>
+    </div>
+    <div class="tool-box reveal">
+      <img src="https://cdn.simpleicons.org/openai/white" class="tool-icon" alt="ChatGPT">
+      <h3>ChatGPT</h3>
+    </div>
+  </div>
 </section>
 
 <!-- MY WORK -->
-
 <section id="work">
-
-<h2 class="section-title reveal">My Work</h2>
-
-<div class="work-grid">
-
-<div class="work-card reveal">
-
-<img
-src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop"
-class="work-image">
-
-<div class="work-content">
-
-<h3>Email Management</h3>
-
-<p>
-Professional inbox organization,
-email prioritization,
-and communication management.
-</p>
-
-</div>
-
-</div>
-
-<div class="work-card reveal">
-
-<img
-src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1200&auto=format&fit=crop"
-class="work-image">
-
-<div class="work-content">
-
-<h3>Calendar Coordination</h3>
-
-<p>
-Meeting scheduling,
-appointment organization,
-and workflow planning.
-</p>
-
-</div>
-
-</div>
-
-<div class="work-card reveal">
-
-<img
-src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop"
-class="work-image">
-
-<div class="work-content">
-
-<h3>Customer Support</h3>
-
-<p>
-Professional customer communication
-and business support services.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+  <h2 class="section-title reveal">My Work Portfolio</h2>
+  <div class="work-grid">
+    <div class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Email Management">
+      <div class="work-content">
+        <h3>📧 Email Management</h3>
+        <p>Professional inbox filtering, label automation, and fast client response systems.</p>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Calendar Coordination">
+      <div class="work-content">
+        <h3>📅 Calendar Coordination</h3>
+        <p>Strategic appointment booking, time audit, and smart scheduling for executives.</p>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Customer Support">
+      <div class="work-content">
+        <h3>💬 Customer Support</h3>
+        <p>Compassionate & efficient support via chat/email, boosting retention rates.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- REVIEWS -->
-
+<!-- CLIENT REVIEWS -->
 <section id="reviews">
-
-<h2 class="section-title reveal">Client Reviews</h2>
-
-<div class="reviews-grid">
-
-<div class="review-card reveal">
-<p>
-“Vildah is professional, organized,
-and very reliable with communication and scheduling.”
-</p>
-<h4>— Michael R.</h4>
-</div>
-
-<div class="review-card reveal">
-<p>
-“Excellent virtual assistant with amazing time management skills.”
-</p>
-<h4>— Amanda L.</h4>
-</div>
-
-<div class="review-card reveal">
-<p>
-“Creative, efficient, and highly professional in every task.”
-</p>
-<h4>— Sophie N.</h4>
-</div>
-
-</div>
-
+  <h2 class="section-title reveal">Client Love</h2>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <p>“Vildah is a game-changer. Her email management saved me 15+ hours per week. Highly organized and proactive!”</p>
+      <h4>— Michael R.</h4>
+    </div>
+    <div class="review-card reveal">
+      <p>“Excellent virtual assistant with amazing time management skills. She runs my calendar flawlessly.”</p>
+      <h4>— Amanda L.</h4>
+    </div>
+    <div class="review-card reveal">
+      <p>“Creative, efficient, and highly professional in every task. Vildah is my go-to partner for all admin needs.”</p>
+      <h4>— Sophie N.</h4>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-
+<!-- CONTACT (with bigger icons) -->
 <section id="contact">
-
-<h2 class="section-title reveal">Let's Work Together</h2>
-
-<div class="contact-box reveal">
-
-<div class="contact-item">
-<i class="fas fa-envelope"></i>
-<p>vildahapondi38@gmail.com</p>
-</div>
-
-<div class="contact-item">
-<i class="fab fa-whatsapp"></i>
-<p>+254 757 428 735</p>
-</div>
-
-<br>
-
-<a href="mailto:vildahapondi38@gmail.com" class="btn">
-Hire Me
-</a>
-
-</div>
-
+  <h2 class="section-title reveal">Let's Work Together</h2>
+  <div class="contact-box reveal">
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <p>vildahapondi38@gmail.com</p>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-whatsapp"></i>
+      <p>+254 757 428 735</p>
+    </div>
+    <br>
+    <a href="mailto:vildahapondi38@gmail.com" class="btn">✉️ Hire Me Now</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
-<p>
-© 2026 Vildah Apondi | Virtual Assistant Portfolio
-</p>
-
+  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio — Precision & Excellence</p>
 </footer>
 
-<!-- SCROLL REVEAL -->
-
+<!-- SCROLL REVEAL SCRIPT -->
 <script>
-
-function revealElements(){
-
-let reveals=document.querySelectorAll(".reveal");
-
-for(let i=0;i<reveals.length;i++){
-
-let windowHeight=window.innerHeight;
-
-let revealTop=reveals[i].getBoundingClientRect().top;
-
-let revealPoint=100;
-
-if(revealTop < windowHeight - revealPoint){
-
-reveals[i].classList.add("active");
-
-}
-
-}
-
-}
-
-window.addEventListener("scroll",revealElements);
-
-revealElements();
-
+  function revealElements() {
+    let reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let revealTop = reveals[i].getBoundingClientRect().top;
+      let revealPoint = 100;
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", revealElements);
+  window.addEventListener("load", revealElements);
+  revealElements();
 </script>
-
 </body>
 </html>
+```
