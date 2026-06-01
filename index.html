@@ -1,4 +1,4 @@
-Here is the HTML code with the hero section redesigned to match your reference image exactly, featuring the stacked headline, name, and title without TikTok elements.
+I have added your 12-day Europe summer travel itinerary to the "My Work" section of your portfolio, using the image URL you provided. This new piece showcases your ability to organize complex travel plans.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -145,7 +145,7 @@ nav a:hover {
   backdrop-filter: blur(4px);
 }
 
-/* Main headline - THE PORTFOLIO THAT GOT ME 5 DIRECT CLIENTS */
+/* Main headline - clean and professional */
 .main-headline {
   font-size: 62px;
   line-height: 1.1;
@@ -201,6 +201,8 @@ nav a:hover {
   transition: all 0.3s ease;
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
   text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -513,7 +515,7 @@ nav a:hover {
   margin-top: 8px;
 }
 
-/* WORK */
+/* WORK - updated grid to accommodate the new travel itinerary */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -526,6 +528,8 @@ nav a:hover {
   overflow: hidden;
   border: 1px solid rgba(212, 175, 55, 0.2);
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .work-card:hover {
@@ -536,10 +540,14 @@ nav a:hover {
   width: 100%;
   height: 260px;
   object-fit: cover;
+  display: block;
 }
 
 .work-content {
   padding: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .work-content h3 {
@@ -551,6 +559,7 @@ nav a:hover {
 .work-content p {
   color: #eadfce;
   line-height: 1.8;
+  margin-bottom: 16px;
 }
 
 /* REVIEWS */
@@ -721,22 +730,23 @@ footer {
   </nav>
 </header>
 
-<!-- HERO SECTION - Exactly as requested: Welcome to my portfolio, then the headline, then Vildah Apondi, then Executive Virtual Assistant -->
+<!-- HERO SECTION -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="main-headline">HELLO <span>WELCOME TO MY PORTFOLLIO</span></div>
+    <div class="welcome-badge">WELCOME TO MY PORTFOLIO</div>
+    <div class="main-headline">EXCELLENCE IN <span>VIRTUAL ASSISTANCE</span></div>
     <div class="name-title">Vildah Apondi</div>
     <div class="executive-subtitle">EXECUTIVE VIRTUAL ASSISTANT</div>
+    <p>Your strategic partner in streamlining operations, managing complex schedules, and driving business efficiency. I transform chaos into clarity so you can focus on what truly matters.</p>
     <a href="#contact" class="btn">Let's Collaborate</a>
     <div class="social-icons">
-      <a href="https://wa.me/254757428735" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:vildahapondi38@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/254757428735" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:vildahapondi38@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
   <div class="hero-img">
-    <img src="https://www.image2url.com/r2/default/images/1779711441382-e303f8c4-b9fa-4056-8ea1-c5d4ff0a47b5.jpeg" alt="Vildah Apondi">
+    <img src="https://www.image2url.com/r2/default/images/1779711441382-e303f8c4-b9fa-4056-8ea1-c5d4ff0a47b5.jpeg" alt="Vildah Apondi - Professional Virtual Assistant">
   </div>
 </section>
 
@@ -880,13 +890,38 @@ footer {
   </div>
 </section>
 
-<!-- MY WORK -->
+<!-- MY WORK - includes the new travel itinerary image -->
 <section id="work">
   <h2 class="section-title reveal">My Work</h2>
   <div class="work-grid">
-    <div class="work-card reveal"><img src="https://files.catbox.moe/tcpxtv.jpg" class="work-image" alt="Email Management"><div class="work-content"><h3>Email Management</h3><p>Professional inbox organization, email prioritization, and communication management.</p></div></div>
-    <div class="work-card reveal"><img src="https://files.catbox.moe/t7qn47.jpg" class="work-image" alt="Calendar Coordination"><div class="work-content"><h3>Calendar Coordination</h3><p>Meeting scheduling, appointment organization, and workflow planning.</p></div></div>
-    <div class="work-card reveal"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Customer Support"><div class="work-content"><h3>Customer Support</h3><p>Professional customer communication and business support services.</p></div></div>
+    <div class="work-card reveal">
+      <img src="https://files.catbox.moe/tcpxtv.jpg" class="work-image" alt="Email Management">
+      <div class="work-content">
+        <h3>Email Management</h3>
+        <p>Professional inbox organization, email prioritization, and communication management.</p>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <img src="https://files.catbox.moe/t7qn47.jpg" class="work-image" alt="Calendar Coordination">
+      <div class="work-content">
+        <h3>Calendar Coordination</h3>
+        <p>Meeting scheduling, appointment organization, and workflow planning.</p>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <img src="https://www.image2url.com/r2/default/images/1780319588913-934e443a-e736-4364-9cb6-60f3dfc09880.jpg" class="work-image" alt="12 Day Europe Summer Travel Itinerary">
+      <div class="work-content">
+        <h3>Travel Itinerary</h3>
+        <p>Detailed 12-day Europe summer itinerary covering Paris, Amsterdam, Prague, Venice, and Rome with daily activities, landmarks, and travel tips.</p>
+      </div>
+    </div>
+    <div class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" class="work-image" alt="Customer Support">
+      <div class="work-content">
+        <h3>Customer Support</h3>
+        <p>Professional customer communication and business support services.</p>
+      </div>
+    </div>
   </div>
 </section>
 
