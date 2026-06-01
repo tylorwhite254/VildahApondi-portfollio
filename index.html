@@ -1,3 +1,5 @@
+Here is an HTML document that adds the requested services to the virtual assistant portfolio page.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -343,7 +345,7 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* SERVICES */
+/* SERVICES - UPDATED GRID FOR EXTRA SERVICES */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -361,6 +363,7 @@ nav a:hover {
 
 .service-box:hover {
   transform: translateY(-8px);
+  border-color: var(--gold);
 }
 
 .service-box i {
@@ -373,12 +376,13 @@ nav a:hover {
 .service-box h3 {
   color: var(--gold);
   margin-bottom: 18px;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .service-box p {
   color: #eadfce;
-  line-height: 1.8;
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 /* TOOLS */
@@ -635,6 +639,9 @@ footer {
   .section-title {
     font-size: 40px;
   }
+  .service-box h3 {
+    font-size: 24px;
+  }
 }
 </style>
 </head>
@@ -736,24 +743,54 @@ footer {
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES - Expanded with all requested offerings: Travel Planning/Booking, Data Entry, Internet Research, Document Preparation, Meeting Coordination, CRM Updates, File/Folder Organization -->
 <section id="services">
-  <h2 class="section-title reveal">Services</h2>
+  <h2 class="section-title reveal">Premium Services</h2>
   <div class="services-grid">
+    <div class="service-box reveal">
+      <i class="fas fa-plane-departure"></i>
+      <h3>Travel Planning & Booking</h3>
+      <p>Flight, hotel & itinerary coordination. End-to-end travel logistics, visa assistance, and seamless booking management.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-database"></i>
+      <h3>Data Entry</h3>
+      <p>Accurate data entry, database management, data cleansing, and spreadsheet organization with high attention to detail.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-globe"></i>
+      <h3>Internet Research</h3>
+      <p>In-depth market research, competitor analysis, lead generation, and data gathering to support strategic decisions.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-file-alt"></i>
+      <h3>Document Preparation</h3>
+      <p>Professional formatting, editing, proofreading, and creation of reports, proposals, presentations, and official docs.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-users"></i>
+      <h3>Meeting Coordination</h3>
+      <p>End-to-end meeting logistics, agenda creation, minute-taking, follow-ups and cross-team scheduling.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-chart-simple"></i>
+      <h3>CRM Updates</h3>
+      <p>Maintain and update CRM systems, track client interactions, manage pipelines, and ensure data integrity.</p>
+    </div>
+    <div class="service-box reveal">
+      <i class="fas fa-folder-open"></i>
+      <h3>File & Folder Organization</h3>
+      <p>Digital decluttering, intuitive folder structures, cloud storage optimization, and document management systems.</p>
+    </div>
     <div class="service-box reveal">
       <i class="fas fa-envelope-open-text"></i>
       <h3>Email Management</h3>
-      <p>Inbox organization, prioritization, and professional communication handling.</p>
+      <p>Inbox organization, prioritization, and professional communication handling — included as core support.</p>
     </div>
     <div class="service-box reveal">
       <i class="fas fa-calendar-check"></i>
       <h3>Calendar Coordination</h3>
-      <p>Meeting scheduling, appointment management, and workflow organization.</p>
-    </div>
-    <div class="service-box reveal">
-      <i class="fas fa-headset"></i>
-      <h3>Customer Support</h3>
-      <p>Professional client communication and support services.</p>
+      <p>Strategic meeting scheduling, appointment management, and time optimization for executives.</p>
     </div>
   </div>
 </section>
@@ -896,4 +933,5 @@ footer {
   revealElements();
 </script>
 </body>
-      </html>
+</html>
+```
