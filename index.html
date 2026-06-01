@@ -1,4 +1,4 @@
-Here is the HTML code with a redesigned hero section that matches the TikTok-inspired layout you requested, featuring the "THE PORTFOLIO THAT GOT ME 5 DIRECT CLIENTS" headline and "WELCOME TO MY PORTFOLIO" tag, with the name updated to Vildah Apondi.
+Here is the HTML code with the hero section redesigned to match your reference image exactly, featuring the stacked headline, name, and title without TikTok elements.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +115,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* HERO - REDESIGNED TO MATCH TIKTOK STYLE */
+/* HERO - redesigned exactly like the reference image */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -130,29 +130,32 @@ nav a:hover {
   min-width: 300px;
 }
 
-.hero-badge {
+/* Welcome badge */
+.welcome-badge {
   display: inline-block;
-  background: rgba(212,175,55,0.15);
-  border: 1px solid var(--gold);
-  padding: 6px 18px;
+  background: rgba(212,175,55,0.12);
+  border: 1px solid rgba(212,175,55,0.4);
+  padding: 8px 22px;
   border-radius: 40px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   color: var(--gold-light);
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(4px);
 }
 
-.hero-text h1 {
-  font-size: 68px;
+/* Main headline - THE PORTFOLIO THAT GOT ME 5 DIRECT CLIENTS */
+.main-headline {
+  font-size: 62px;
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-family: 'Playfair Display', serif;
   font-weight: 800;
   color: white;
 }
 
-.hero-text h1 span {
+.main-headline span {
   color: var(--gold);
   background: linear-gradient(135deg, var(--gold), #f5e18b);
   -webkit-background-clip: text;
@@ -160,27 +163,25 @@ nav a:hover {
   color: var(--gold);
 }
 
-.hero-subhead {
-  font-size: 28px;
-  color: #f5e2a4;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.hero-tagline {
-  font-size: 14px;
-  color: #c9b58a;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.hero-tagline i {
+/* Name - Vildah Apondi */
+.name-title {
+  font-size: 48px;
+  font-weight: 700;
   color: var(--gold);
-  font-size: 18px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+/* Executive Virtual Assistant subtitle */
+.executive-subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  color: #e8dcc0;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  border-left: 4px solid var(--gold);
+  padding-left: 18px;
 }
 
 .hero-text p {
@@ -651,11 +652,14 @@ footer {
   section {
     padding: 90px 5%;
   }
-  .hero-text h1 {
-    font-size: 48px;
+  .main-headline {
+    font-size: 42px;
   }
-  .hero-subhead {
-    font-size: 24px;
+  .name-title {
+    font-size: 36px;
+  }
+  .executive-subtitle {
+    font-size: 18px;
   }
   .hero-img img {
     width: 280px;
@@ -680,8 +684,16 @@ footer {
     flex-direction: column-reverse;
     text-align: center;
   }
-  .hero-text h1 {
-    font-size: 40px;
+  .main-headline {
+    font-size: 36px;
+  }
+  .name-title {
+    font-size: 32px;
+  }
+  .executive-subtitle {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
   }
   .social-icons {
     justify-content: center;
@@ -689,16 +701,13 @@ footer {
   .section-title {
     font-size: 40px;
   }
-  .hero-tagline {
-    justify-content: center;
-  }
 }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">@virtually.kay</div>
+  <div class="logo">Vildah Portfolio</div>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -712,24 +721,19 @@ footer {
   </nav>
 </header>
 
-<!-- HERO SECTION - REDESIGNED EXACT MATCH TO TIKTOK STYLE -->
+<!-- HERO SECTION - Exactly as requested: Welcome to my portfolio, then the headline, then Vildah Apondi, then Executive Virtual Assistant -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="hero-badge">WELCOME TO MY PORTFOLIO</div>
-    <h1>THE PORTFOLIO THAT GOT ME <span>5 DIRECT CLIENTS</span></h1>
-    <div class="hero-subhead">Vildah Apondi</div>
-    <div class="hero-tagline">
-      <i class="fab fa-tiktok"></i> @virtually.kay 
-      <span style="color: #b88b4a;">|</span> 
-      <i class="fas fa-briefcase"></i> EXECUTIVE VIRTUAL ASSISTANT
-    </div>
+    <div class="welcome-badge">WELCOME TO MY PORTFOLIO</div>
+    <div class="main-headline">THE PORTFOLIO THAT GOT ME <span>5 DIRECT CLIENTS</span></div>
+    <div class="name-title">Vildah Apondi</div>
+    <div class="executive-subtitle">EXECUTIVE VIRTUAL ASSISTANT</div>
     <p>Helping businesses stay organized through professional inbox management, calendar coordination, administrative support, workflow organization, and customer communication — all powered by precision and care.</p>
-    <a href="#contact" class="btn"> Let's Collaborate</a>
+    <a href="#contact" class="btn">Let's Collaborate</a>
     <div class="social-icons">
       <a href="https://wa.me/254757428735" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@virtually.kay" target="_blank"><i class="fab fa-tiktok"></i></a>
       <a href="mailto:vildahapondi38@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </div>
@@ -749,7 +753,7 @@ footer {
   </div>
 </section>
 
-<!-- SKILLS SECTION -->
+<!-- SKILLS -->
 <section id="skills">
   <h2 class="section-title reveal">Professional Skills</h2>
   <div class="professional-grid">
@@ -910,7 +914,7 @@ footer {
 </section>
 
 <footer>
-  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio | TikTok: @virtually.kay</p>
+  <p>© 2026 Vildah Apondi | Virtual Assistant Portfolio</p>
 </footer>
 
 <script>
