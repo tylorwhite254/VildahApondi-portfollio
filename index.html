@@ -1,4 +1,4 @@
-Here is the HTML code with the hero section redesigned to match your reference image exactly, featuring the stacked headline, name, and title without TikTok elements.
+Here is the HTML code with the requested changes: the services section title is now simply "SERVICES", and the small "WELCOME TO MY PORTFOLIO" badge has been removed from the hero section.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +115,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* HERO - redesigned exactly like the reference image */
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -130,26 +130,11 @@ nav a:hover {
   min-width: 300px;
 }
 
-/* Welcome badge */
-.welcome-badge {
-  display: inline-block;
-  background: rgba(212,175,55,0.12);
-  border: 1px solid rgba(212,175,55,0.4);
-  padding: 8px 22px;
-  border-radius: 40px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  color: var(--gold-light);
-  margin-bottom: 30px;
-  backdrop-filter: blur(4px);
-}
-
-/* Main headline - THE PORTFOLIO THAT GOT ME 5 DIRECT CLIENTS */
+/* Main headline */
 .main-headline {
-  font-size: 62px;
+  font-size: 58px;
   line-height: 1.1;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
   font-weight: 800;
   color: white;
@@ -377,7 +362,7 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* SERVICES */
+/* SERVICES - renamed from WIT Services to just Services */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -721,13 +706,13 @@ footer {
   </nav>
 </header>
 
-<!-- HERO SECTION - Exactly as requested: Welcome to my portfolio, then the headline, then Vildah Apondi, then Executive Virtual Assistant -->
+<!-- HERO SECTION - Removed the small welcome badge as requested -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="welcome-badge">WELCOME TO MY PORTFOLIO</div>
-    <div class="main-headline">HELLO <span>WELCOME TO MY PORTFOLLIO</span></div>
+    <div class="main-headline">THE PORTFOLIO THAT GOT ME <span>5 DIRECT CLIENTS</span></div>
     <div class="name-title">Vildah Apondi</div>
     <div class="executive-subtitle">EXECUTIVE VIRTUAL ASSISTANT</div>
+    <p>Helping businesses stay organized through professional inbox management, calendar coordination, administrative support, workflow organization, and customer communication — all powered by precision and care.</p>
     <a href="#contact" class="btn">Let's Collaborate</a>
     <div class="social-icons">
       <a href="https://wa.me/254757428735" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -823,9 +808,9 @@ footer {
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES - Renamed from WIT Services to SERVICES -->
 <section id="services">
-  <h2 class="section-title reveal">WIT Services</h2>
+  <h2 class="section-title reveal">SERVICES</h2>
   <div class="services-grid">
     <div class="service-category reveal">
       <h3>ADMINISTRATIVE SUPPORT</h3>
