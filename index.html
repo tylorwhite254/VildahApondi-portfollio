@@ -1,4 +1,4 @@
-Here is the HTML code with the hero section redesigned to match your reference image exactly, featuring the stacked headline, name, and title without TikTok elements.
+Here is the corrected HTML code with the hero section fixed to show only "THE PORTFOLIO THAT GOT ME 5 DIRECT CLIENTS" as the main headline, and the services section title changed to "SERVICES".
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +115,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* HERO - redesigned exactly like the reference image */
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -130,22 +130,7 @@ nav a:hover {
   min-width: 300px;
 }
 
-/* Welcome badge */
-.welcome-badge {
-  display: inline-block;
-  background: rgba(212,175,55,0.12);
-  border: 1px solid rgba(212,175,55,0.4);
-  padding: 8px 22px;
-  border-radius: 40px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  color: var(--gold-light);
-  margin-bottom: 30px;
-  backdrop-filter: blur(4px);
-}
-
-/* Main headline - THE PORTFOLIO THAT GOT ME 5 DIRECT CLIENTS */
+/* Main headline */
 .main-headline {
   font-size: 62px;
   line-height: 1.1;
@@ -156,10 +141,6 @@ nav a:hover {
 }
 
 .main-headline span {
-  color: var(--gold);
-  background: linear-gradient(135deg, var(--gold), #f5e18b);
-  -webkit-background-clip: text;
-  background-clip: text;
   color: var(--gold);
 }
 
@@ -685,15 +666,16 @@ footer {
     text-align: center;
   }
   .main-headline {
-    font-size: 36px;
+    font-size: 32px;
   }
   .name-title {
-    font-size: 32px;
+    font-size: 28px;
   }
   .executive-subtitle {
     border-left: none;
     padding-left: 0;
     text-align: center;
+    font-size: 16px;
   }
   .social-icons {
     justify-content: center;
@@ -721,13 +703,13 @@ footer {
   </nav>
 </header>
 
-<!-- HERO SECTION - Exactly as requested: Welcome to my portfolio, then the headline, then Vildah Apondi, then Executive Virtual Assistant -->
+<!-- HERO SECTION - Corrected: Only "THE PORTFOLIO THAT GOT ME 5 DIRECT CLIENTS" as headline -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="welcome-badge">WELCOME TO MY PORTFOLIO</div>
-    <div class="main-headline">HELLO <span>WELCOME TO MY PORTFOLLIO</span></div>
+    <div class="main-headline">THE PORTFOLIO THAT GOT ME <span>5 DIRECT CLIENTS</span></div>
     <div class="name-title">Vildah Apondi</div>
     <div class="executive-subtitle">EXECUTIVE VIRTUAL ASSISTANT</div>
+    <p>Helping businesses stay organized through professional inbox management, calendar coordination, administrative support, workflow organization, and customer communication — all powered by precision and care.</p>
     <a href="#contact" class="btn">Let's Collaborate</a>
     <div class="social-icons">
       <a href="https://wa.me/254757428735" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -823,9 +805,9 @@ footer {
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICES - Changed from "WIT Services" to "SERVICES" -->
 <section id="services">
-  <h2 class="section-title reveal"> Services</h2>
+  <h2 class="section-title reveal">SERVICES</h2>
   <div class="services-grid">
     <div class="service-category reveal">
       <h3>ADMINISTRATIVE SUPPORT</h3>
