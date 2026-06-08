@@ -1,6 +1,4 @@
-You are absolutely right to question that — I apologize for the confusion. You never asked for that headline change. You only asked me to remove the TikTok element and later to add the travel itinerary image. I mistakenly changed your main headline from what you had.
-
-Let me restore your original hero section exactly as you had it. Here is the corrected HTML with your original headline "HELLO WELCOME TO MY PORTFOLLIO" (spelling kept as you originally wrote it), plus the travel itinerary added:
+Here is the updated HTML code with the sections reordered exactly as you requested: "My Services" first, followed by "Tools I Use", then "My Work", and finally "Certificates".
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -343,44 +341,6 @@ nav a:hover {
   list-style-type: square;
 }
 
-/* CERTIFICATES */
-.certificate-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: center;
-}
-
-.certificate-card {
-  background: var(--card-solid);
-  border-radius: 30px;
-  overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  max-width: 1000px;
-  width: 100%;
-  transition: 0.3s;
-}
-
-.certificate-card:hover {
-  transform: translateY(-6px);
-}
-
-.certificate-image {
-  width: 100%;
-  display: block;
-}
-
-.certificate-content {
-  padding: 30px;
-  text-align: center;
-}
-
-.certificate-content h3 {
-  color: var(--gold);
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
 /* SERVICES */
 .services-grid {
   display: grid;
@@ -564,6 +524,44 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
+/* CERTIFICATES */
+.certificate-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.certificate-card {
+  background: var(--card-solid);
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  max-width: 1000px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+}
+
+.certificate-image {
+  width: 100%;
+  display: block;
+}
+
+.certificate-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.certificate-content h3 {
+  color: var(--gold);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
 /* REVIEWS */
 .reviews-grid {
   display: grid;
@@ -723,10 +721,10 @@ footer {
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#certificates">Certificates</a>
     <a href="#services">Services</a>
     <a href="#tools">Tools</a>
     <a href="#work">My Work</a>
+    <a href="#certificates">Certificates</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -811,30 +809,9 @@ footer {
   </div>
 </section>
 
-<!-- CERTIFICATES -->
-<section id="certificates">
-  <h2 class="section-title reveal">Certificates</h2>
-  <div class="certificate-container">
-    <div class="certificate-card reveal">
-      <img src="https://i.imgur.com/vw7ZGh0.jpeg" class="certificate-image" alt="Virtual Assistant Certificate">
-      <div class="certificate-content">
-        <h3>Virtual Assistant Certificate</h3>
-        <p>Issued by Alx</p>
-      </div>
-    </div>
-    <div class="certificate-card reveal">
-      <img src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg" class="certificate-image" alt="Certificate of Training">
-      <div class="certificate-content">
-        <h3>Certificate of Training</h3>
-        <p>Issued by Novapex</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
+<!-- SERVICES - Now comes FIRST after Skills as you requested -->
 <section id="services">
-  <h2 class="section-title reveal"> Services</h2>
+  <h2 class="section-title reveal">My Services</h2>
   <div class="services-grid">
     <div class="service-category reveal">
       <h3>ADMINISTRATIVE SUPPORT</h3>
@@ -875,7 +852,7 @@ footer {
   </div>
 </section>
 
-<!-- TOOLS -->
+<!-- TOOLS I USE - Second in your new order -->
 <section id="tools">
   <h2 class="section-title reveal">Tools I Use</h2>
   <div class="tools-grid">
@@ -890,7 +867,7 @@ footer {
   </div>
 </section>
 
-<!-- MY WORK - includes the new travel itinerary image -->
+<!-- MY WORK - Third in new order, includes the travel itinerary image -->
 <section id="work">
   <h2 class="section-title reveal">My Work</h2>
   <div class="work-grid">
@@ -920,6 +897,27 @@ footer {
       <div class="work-content">
         <h3>Customer Support</h3>
         <p>Professional customer communication and business support services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES - Now placed after My Work as you requested -->
+<section id="certificates">
+  <h2 class="section-title reveal">Certificates</h2>
+  <div class="certificate-container">
+    <div class="certificate-card reveal">
+      <img src="https://i.imgur.com/vw7ZGh0.jpeg" class="certificate-image" alt="Virtual Assistant Certificate">
+      <div class="certificate-content">
+        <h3>Virtual Assistant Certificate</h3>
+        <p>Issued by Alx</p>
+      </div>
+    </div>
+    <div class="certificate-card reveal">
+      <img src="https://www.image2url.com/r2/default/images/1779450244587-bb8bb03e-7c9a-48c0-a526-7696837489f0.jpg" class="certificate-image" alt="Certificate of Training">
+      <div class="certificate-content">
+        <h3>Certificate of Training</h3>
+        <p>Issued by Novapex</p>
       </div>
     </div>
   </div>
