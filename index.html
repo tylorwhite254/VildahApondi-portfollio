@@ -1,5 +1,3 @@
-Here is the updated HTML code with the sections reordered exactly as you requested: "My Services" first, followed by "Tools I Use", then "My Work", and finally "Certificates".
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -452,6 +450,19 @@ nav a:hover {
   object-fit: contain;
 }
 
+/* QuickBooks specific logo styling */
+.tool-icon-quickbooks {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 22px;
+  transition: transform 0.3s;
+  display: inline-block;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #2c3e50; /* dark background for contrast */
+  padding: 8px;
+}
+
 .tool-icon-fa.monday { color: #FF6B35; }
 .tool-icon-fa.google { color: #34A853; }
 .tool-icon-fa.microsoft { color: #F25022; }
@@ -804,6 +815,7 @@ footer {
         <li>Canva (for basic design & branded docs)</li>
         <li>ChatGPT & Grammarly (for writing assistance)</li>
         <li>Notion | Trello | ClickUp | Asana</li>
+        <li>QuickBooks (basic accounting & invoicing)</li>
       </ul>
     </div>
   </div>
@@ -852,7 +864,7 @@ footer {
   </div>
 </section>
 
-<!-- TOOLS I USE - Second in your new order -->
+<!-- TOOLS I USE - Second in your new order (QuickBooks added) -->
 <section id="tools">
   <h2 class="section-title reveal">Tools I Use</h2>
   <div class="tools-grid">
@@ -864,6 +876,8 @@ footer {
     <a href="https://zoom.us" target="_blank" class="tool-box reveal"><div class="tool-icon-fa zoom"><i class="fas fa-video"></i></div><h3>Zoom</h3><span class="tool-hint">click to explore</span></a>
     <a href="https://slack.com" target="_blank" class="tool-box reveal"><div class="tool-icon-fa slack"><i class="fab fa-slack"></i></div><h3>Slack</h3><span class="tool-hint">click to explore</span></a>
     <a href="https://chat.openai.com" target="_blank" class="tool-box reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="tool-icon-chatgpt-img"><h3>ChatGPT</h3><span class="tool-hint">click to explore</span></a>
+    <!-- QuickBooks added here -->
+    <a href="https://quickbooks.intuit.com" target="_blank" class="tool-box reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/QuickBooks_Logo.svg/2560px-QuickBooks_Logo.svg.png" alt="QuickBooks" class="tool-icon-quickbooks"><h3>QuickBooks</h3><span class="tool-hint">click to explore</span></a>
   </div>
 </section>
 
@@ -919,7 +933,8 @@ footer {
         <h3>Certificate of Training</h3>
         <p>Issued by Novapex</p>
       </div>
-        <div class="certificate-card reveal">
+    </div>
+    <div class="certificate-card reveal">
       <img src="https://cdn.phototourl.com/free/2026-06-30-e8663a3c-44e1-42a6-a85d-3359c324f81b.jpg" class="certificate-image" alt="Professional Communication Certificate">
       <div class="certificate-content">
         <h3>Professional Communication Certificate</h3>
@@ -972,4 +987,3 @@ footer {
 </script>
 </body>
 </html>
-```
