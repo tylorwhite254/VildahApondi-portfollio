@@ -128,22 +128,6 @@ nav a:hover {
   min-width: 300px;
 }
 
-/* Welcome badge */
-.welcome-badge {
-  display: inline-block;
-  background: rgba(212,175,55,0.12);
-  border: 1px solid rgba(212,175,55,0.4);
-  padding: 8px 22px;
-  border-radius: 40px;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  color: var(--gold-light);
-  margin-bottom: 30px;
-  backdrop-filter: blur(4px);
-}
-
-/* Main headline - YOUR ORIGINAL VERSION restored */
 .main-headline {
   font-size: 62px;
   line-height: 1.1;
@@ -161,7 +145,6 @@ nav a:hover {
   color: var(--gold);
 }
 
-/* Name - Vildah Apondi */
 .name-title {
   font-size: 48px;
   font-weight: 700;
@@ -171,7 +154,6 @@ nav a:hover {
   letter-spacing: -0.5px;
 }
 
-/* Executive Virtual Assistant subtitle */
 .executive-subtitle {
   font-size: 22px;
   font-weight: 500;
@@ -222,7 +204,6 @@ nav a:hover {
   box-shadow: 0 0 55px rgba(212, 175, 55, 0.4);
 }
 
-/* SOCIAL ICONS - professional contact links only */
 .social-icons {
   display: flex;
   gap: 25px;
@@ -250,7 +231,6 @@ nav a:hover {
   transform: translateY(-7px);
 }
 
-/* SECTION TITLES */
 .section-title {
   text-align: center;
   font-size: 58px;
@@ -265,7 +245,6 @@ nav a:hover {
   display: none;
 }
 
-/* ABOUT */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -296,7 +275,6 @@ nav a:hover {
   color: #fcf3e2;
 }
 
-/* SKILLS */
 .professional-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -339,7 +317,6 @@ nav a:hover {
   list-style-type: square;
 }
 
-/* SERVICES */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -399,7 +376,6 @@ nav a:hover {
   margin-right: 6px;
 }
 
-/* TOOLS */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -450,7 +426,7 @@ nav a:hover {
   object-fit: contain;
 }
 
-/* QuickBooks specific logo styling */
+/* QuickBooks logo styling - fixed with better sizing */
 .tool-icon-quickbooks {
   width: 85px;
   height: 85px;
@@ -458,9 +434,9 @@ nav a:hover {
   transition: transform 0.3s;
   display: inline-block;
   object-fit: contain;
-  border-radius: 12px;
-  background: #2c3e50; /* dark background for contrast */
-  padding: 8px;
+  border-radius: 16px;
+  background: #0d5e4a;
+  padding: 12px;
 }
 
 .tool-icon-fa.monday { color: #FF6B35; }
@@ -488,7 +464,6 @@ nav a:hover {
   margin-top: 8px;
 }
 
-/* WORK */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -535,7 +510,6 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
-/* CERTIFICATES */
 .certificate-container {
   display: flex;
   flex-direction: column;
@@ -573,7 +547,6 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* REVIEWS */
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -620,7 +593,6 @@ nav a:hover {
   margin-top: 5px;
 }
 
-/* CONTACT */
 .contact-box {
   max-width: 750px;
   margin: auto;
@@ -646,7 +618,6 @@ nav a:hover {
   width: 55px;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 32px 20px;
@@ -655,7 +626,6 @@ footer {
   border-top: 1px solid rgba(212,175,55,0.2);
 }
 
-/* SCROLL REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(60px);
@@ -667,7 +637,6 @@ footer {
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   section {
     padding: 90px 5%;
@@ -741,7 +710,6 @@ footer {
   </nav>
 </header>
 
-<!-- HERO SECTION - YOUR ORIGINAL TEXT restored exactly -->
 <section class="hero" id="home">
   <div class="hero-text">
     <div class="main-headline">HELLO <span>WELCOME TO MY PORTFOLLIO</span></div>
@@ -759,7 +727,6 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <h2 class="section-title reveal">About Me</h2>
   <div class="about-grid">
@@ -770,7 +737,6 @@ footer {
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <h2 class="section-title reveal">Skills</h2>
   <div class="professional-grid">
@@ -821,7 +787,6 @@ footer {
   </div>
 </section>
 
-<!-- SERVICES - Now comes FIRST after Skills as you requested -->
 <section id="services">
   <h2 class="section-title reveal">My Services</h2>
   <div class="services-grid">
@@ -864,7 +829,6 @@ footer {
   </div>
 </section>
 
-<!-- TOOLS I USE - Second in your new order (QuickBooks added) -->
 <section id="tools">
   <h2 class="section-title reveal">Tools I Use</h2>
   <div class="tools-grid">
@@ -876,12 +840,15 @@ footer {
     <a href="https://zoom.us" target="_blank" class="tool-box reveal"><div class="tool-icon-fa zoom"><i class="fas fa-video"></i></div><h3>Zoom</h3><span class="tool-hint">click to explore</span></a>
     <a href="https://slack.com" target="_blank" class="tool-box reveal"><div class="tool-icon-fa slack"><i class="fab fa-slack"></i></div><h3>Slack</h3><span class="tool-hint">click to explore</span></a>
     <a href="https://chat.openai.com" target="_blank" class="tool-box reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" class="tool-icon-chatgpt-img"><h3>ChatGPT</h3><span class="tool-hint">click to explore</span></a>
-    <!-- QuickBooks added here -->
-    <a href="https://quickbooks.intuit.com" target="_blank" class="tool-box reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/QuickBooks_Logo.svg/2560px-QuickBooks_Logo.svg.png" alt="QuickBooks" class="tool-icon-quickbooks"><h3>QuickBooks</h3><span class="tool-hint">click to explore</span></a>
+    <!-- QuickBooks with working logo -->
+    <a href="https://quickbooks.intuit.com" target="_blank" class="tool-box reveal">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/quickbooks.svg" alt="QuickBooks" class="tool-icon-quickbooks" style="background: #2c5f4a; padding: 12px; border-radius: 16px;">
+      <h3>QuickBooks</h3>
+      <span class="tool-hint">click to explore</span>
+    </a>
   </div>
 </section>
 
-<!-- MY WORK - Third in new order, includes the travel itinerary image -->
 <section id="work">
   <h2 class="section-title reveal">My Work</h2>
   <div class="work-grid">
@@ -916,7 +883,6 @@ footer {
   </div>
 </section>
 
-<!-- CERTIFICATES - Now placed after My Work as you requested -->
 <section id="certificates">
   <h2 class="section-title reveal">Certificates</h2>
   <div class="certificate-container">
@@ -944,17 +910,15 @@ footer {
   </div>
 </section>
 
-<!-- REVIEWS -->
 <section id="reviews">
   <h2 class="section-title reveal">Client Reviews</h2>
   <div class="reviews-grid">
-    <div class="review-card reveal"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael" class="reviewer-image"><p>“Vildah is professional, organized, and very reliable with communication and scheduling.”</p><h4>Michael R.</h4><div class="review-title">CEO, TechStart</div></div>
-    <div class="review-card reveal"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amanda" class="reviewer-image"><p>“Excellent virtual assistant with amazing time management skills.”</p><h4>Amanda L.</h4><div class="review-title">Marketing Director</div></div>
-    <div class="review-card reveal"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sophie" class="reviewer-image"><p>“Creative, efficient, and highly professional in every task.”</p><h4>Sophie N.</h4><div class="review-title">Founder, Creative Agency</div></div>
+    <div class="review-card reveal"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael" class="reviewer-image"><p>"Vildah is professional, organized, and very reliable with communication and scheduling."</p><h4>Michael R.</h4><div class="review-title">CEO, TechStart</div></div>
+    <div class="review-card reveal"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amanda" class="reviewer-image"><p>"Excellent virtual assistant with amazing time management skills."</p><h4>Amanda L.</h4><div class="review-title">Marketing Director</div></div>
+    <div class="review-card reveal"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sophie" class="reviewer-image"><p>"Creative, efficient, and highly professional in every task."</p><h4>Sophie N.</h4><div class="review-title">Founder, Creative Agency</div></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2 class="section-title reveal">Let's Work Together</h2>
   <div class="contact-box reveal">
